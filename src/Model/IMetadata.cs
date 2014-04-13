@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace widemeadows.ml.kohonen.model
+﻿namespace widemeadows.ml.kohonen.model
 {
     /// <summary>
     /// Interface IMetadata
