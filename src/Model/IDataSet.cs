@@ -3,7 +3,7 @@
     /// <summary>
     /// Interface IDataSet
     /// </summary>
-    interface IDataSet
+    public interface IDataSet
     {
         /// <summary>
         /// Picks a random datum from the data.

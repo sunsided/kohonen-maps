@@ -23,14 +23,19 @@ namespace RGBMesh
         /// </summary>
         private void Run()
         {
+            const int width = 4;
+            const int height = 4;
+            const int count = width*height;
+
             var generator = new StandardRng();
+            var dataSet = new RgbDataSet(generator, count);
+
             var gridFactory = new Grid2DFactory(generator);
             var neuronFactory = new RandomWeightGenerator(3);
 
-            const int width = 4;
-            const int height = 4;
-
             var grid = gridFactory.CreateGrid(width, height, neuronFactory);
+            
+            var lol = dataSet.PickRandom(generator);
         }
     }
 }
