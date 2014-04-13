@@ -40,8 +40,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IBmuFinder.cs" />
+    <Compile Include="IDataSet.cs" />
+    <Compile Include="IDatum.cs" />
+    <Compile Include="IGrid.cs" />
     <Compile Include="IGrid2D.cs" />
     <Compile Include="IMetadata.cs" />
+    <Compile Include="IMetric.cs" />
     <Compile Include="INeuron.cs" />
     <Compile Include="IRandomNeuronFactory.cs" />
     <Compile Include="IRandomNumber.cs" />

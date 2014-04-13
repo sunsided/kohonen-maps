@@ -64,5 +64,11 @@ namespace widemeadows.ml.kohonen.net
             _height = height;
             _neurons = new INeuron[width, height];
         }
+
+        /// <summary>
+        /// Gets the dimensions.
+        /// </summary>
+        /// <value>The dimensions.</value>
+        public int Dimensions { get { return 2; }}
     }
 }

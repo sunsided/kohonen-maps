@@ -3,7 +3,7 @@ namespace widemeadows.ml.kohonen.model
     /// <summary>
     /// Interface IGrid2D
     /// </summary>
-    public interface IGrid2D
+    public interface IGrid2D : IGrid
     {
         /// <summary>
         /// Gets the grid width.
@@ -18,10 +18,10 @@ namespace widemeadows.ml.kohonen.model
         int Height { get; }
 
         /// <summary>
-        /// Gets the <see cref="INeuron"/> with the specified x.
+        /// Gets the <see cref="INeuron" /> with the specified x.
         /// </summary>
-        /// <param name="y">The x coordinate.</param>
-        /// <param name="y">The y coordinate.</param>
+        /// <param name="x">The x.</param>
+        /// <param name="y">The y.</param>
         /// <returns>NeuronNet.INeuron.</returns>
         INeuron this[int x, int y] { get; }
     }
