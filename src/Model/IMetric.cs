@@ -3,14 +3,15 @@
     /// <summary>
     /// Interface IMetric
     /// </summary>
-    interface IMetric
+    public interface IMetric
     {
         /// <summary>
-        /// Distances the specified neuron.
+        /// Calculates the distance between two weight vectors.
         /// </summary>
         /// <param name="a">A.</param>
         /// <param name="b">The b.</param>
         /// <returns>System.Double.</returns>
+        /// <exception cref="System.ArgumentException">Lengths of weight vectors differ.</exception>
         double Distance(IWeights a, IWeights b);
     }
 }
