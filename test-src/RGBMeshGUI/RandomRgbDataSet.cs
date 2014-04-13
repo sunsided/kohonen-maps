@@ -6,7 +6,7 @@ namespace widemeadows.ml.kohonen.tests.rgbmesh
     /// <summary>
     /// Class RgbDataSet.
     /// </summary>
-    class RgbDataSet : IDataSet
+    class RandomRgbDataSet : IDataSet
     {
         /// <summary>
         /// The colors
@@ -18,7 +18,7 @@ namespace widemeadows.ml.kohonen.tests.rgbmesh
         /// </summary>
         /// <param name="generator">The generator.</param>
         /// <param name="size">The size of the data set.</param>
-        public RgbDataSet(IRandomNumber generator, int size)
+        public RandomRgbDataSet(IRandomNumber generator, int size)
         {
             _colors = new Color[size];
             for (int i = 0; i < size; ++i)

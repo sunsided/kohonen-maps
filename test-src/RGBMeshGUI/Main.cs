@@ -1,15 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using widemeadows.ml.kohonen.model;
 
-namespace RGBMeshGUI
+namespace widemeadows.ml.kohonen.tests.rgbmesh
 {
     public partial class Main : Form
     {
@@ -17,6 +11,11 @@ namespace RGBMeshGUI
         /// The grid
         /// </summary>
         private IGrid2D _grid;
+
+        /// <summary>
+        /// The data set window
+        /// </summary>
+        private DataSet _dataSetWindow;
 
         public Main()
         {
@@ -49,7 +48,7 @@ namespace RGBMeshGUI
             var ystep = ClientRectangle.Height / ((float)width + 1);
 
             var gr = e.Graphics;
-            float w = Math.Min(xstep, ystep) * 0.5F;
+            float w = Math.Min(xstep, ystep) * 0.75F;
 
             foreach (var gn in grid)
             {
@@ -90,6 +89,21 @@ namespace RGBMeshGUI
         protected override void OnResize(EventArgs e)
         {
             Invalidate();
+        }
+
+        /// <summary>
+        /// Sets the data.
+        /// </summary>
+        /// <param name="dataSet">The data set.</param>
+        public void SetData(IRgbDataSet dataSet)
+        {
+            if (_dataSetWindow == null)
+            {
+                _dataSetWindow = new DataSet();
+                _dataSetWindow.Show(this);
+            }
+
+            _dataSetWindow.SetData(dataSet);
         }
     }
 }

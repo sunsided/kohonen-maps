@@ -1,6 +1,6 @@
 ﻿namespace widemeadows.ml.kohonen.tests.rgbmesh
 {
-    partial class Main
+    partial class DataSet
     {
         /// <summary>
         /// Required designer variable.
@@ -30,14 +30,14 @@
         {
             this.SuspendLayout();
             // 
-            // Main
+            // DataSet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.ClientSize = new System.Drawing.Size(284, 261);
-            this.Name = "Main";
-            this.Text = "Self-Organizing Kohonen Maps";
+            this.ClientSize = new System.Drawing.Size(242, 222);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.Name = "DataSet";
+            this.Text = "Input Set";
             this.ResumeLayout(false);
 
         }
@@ -45,4 +45,3 @@
         #endregion
     }
 }
-
