@@ -9,6 +9,8 @@ namespace RandomNumberGenerator
     /// Class StandardRng. This class cannot be inherited.
     /// </summary>
     [Export(typeof(IRandomNumber))]
+    [ExportMetadata("Name", "Default RNG")]
+    [ExportMetadata("Version", "1.0.0.0")]
     public sealed class StandardRng : IRandomNumber
     {
         /// <summary>

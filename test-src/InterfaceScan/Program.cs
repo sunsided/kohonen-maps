@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.Composition;
 using System.ComponentModel.Composition.Hosting;
 using widemeadows.ml.kohonen.model;
@@ -14,7 +15,7 @@ namespace widemeadows.ml.kohonen.tests.interfacescan
         }
 
         [ImportMany(typeof(IRandomNumber))]
-        private IRandomNumber[] _rngs = null;
+        private IEnumerable<Lazy<IRandomNumber, Dictionary<string, object>>> _rngs = null;
 
         /// <summary>
         /// Runs this instance.
@@ -25,9 +26,15 @@ namespace widemeadows.ml.kohonen.tests.interfacescan
             var container = new CompositionContainer(catalog);
             container.ComposeParts(this);
 
-            foreach (IRandomNumber contract in _rngs)
+            foreach (var contract in _rngs)
             {
-                var number = contract.GetDouble();
+                object name, version;
+                contract.Metadata.TryGetValue("Name", out name);
+                contract.Metadata.TryGetValue("Version", out version);
+                
+                Console.WriteLine("Selecting \"{0}\", Version {1}", name, version);
+
+                var number = contract.Value.GetDouble();
                 Console.WriteLine("Number from generator: {0}", number);
             }
 
