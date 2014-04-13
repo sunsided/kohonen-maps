@@ -11,7 +11,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{12E5DDED
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RandomNumberGenerator", "src\RandomNumberGenerator\RandomNumberGenerator.csproj", "{6C8E4033-007D-43CA-96BB-80BD88249911}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "UnitTests\UnitTests.csproj", "{3BE793CD-BFE2-42D9-9F12-4B6C8CAC827D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "test-src\UnitTests\UnitTests.csproj", "{3BE793CD-BFE2-42D9-9F12-4B6C8CAC827D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
