@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{31069D8C-1779-460E-AA06-5CD126AEDE9F}</ProjectGuid>
+    <ProjectGuid>{03C23207-E32C-4C68-9B6D-B9D1E1A50233}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>widemeadows.ml.kohonen.model</RootNamespace>
-    <AssemblyName>Model</AssemblyName>
+    <RootNamespace>widemeadows.ml.kohonen.neighborhoods</RootNamespace>
+    <AssemblyName>Neighborhoods</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -16,7 +16,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\bin\Release\</OutputPath>
+    <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -24,7 +24,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>..\..\bin\Release\</OutputPath>
+    <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -40,23 +40,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IGridNeuron.cs" />
-    <Compile Include="IBmuFinder.cs" />
-    <Compile Include="IDataSet.cs" />
-    <Compile Include="IDatum.cs" />
-    <Compile Include="IGrid.cs" />
-    <Compile Include="IGrid2D.cs" />
-    <Compile Include="ILearningRate.cs" />
-    <Compile Include="IMetadata.cs" />
-    <Compile Include="IMetric.cs" />
-    <Compile Include="INeighborhoodFunction.cs" />
-    <Compile Include="INeuron.cs" />
-    <Compile Include="IRadiusFunction.cs" />
-    <Compile Include="IRandomNeuronFactory.cs" />
-    <Compile Include="IRandomNumber.cs" />
-    <Compile Include="IdMetadataAttribute.cs" />
-    <Compile Include="IWeights.cs" />
+    <Compile Include="ExponentialShrink.cs" />
+    <Compile Include="LearningRateExponentialShrink.cs" />
+    <Compile Include="RadiusExponentialShrink.cs" />
+    <Compile Include="GaussianNeighborhood.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{31069D8C-1779-460E-AA06-5CD126AEDE9F}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
