@@ -11,6 +11,6 @@
         /// <param name="grid">The grid.</param>
         /// <param name="datum">The datum.</param>
         /// <returns>INeuron.</returns>
-        INeuron FindBestMatchingUnit(IGrid2D grid, IDatum datum);
+        IGridNeuron FindBestMatchingUnit(IGrid2D grid, IDatum datum);
     }
 }

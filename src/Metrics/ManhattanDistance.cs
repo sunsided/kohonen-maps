@@ -9,7 +9,7 @@ namespace widemeadows.ml.kohonen.metrics
     /// </summary>
     [Export(typeof(IMetric))]
     [PartCreationPolicy(CreationPolicy.Shared)]
-    [IdMetadataAttribute("642CC4FF-755B-4C90-B92C-7A40C16CE110", "Manhattan Distance", "1.0.0.0")]
+    [IdMetadataAttribute("642CC4FF-755B-4C90-B92C-7A40C16CE110", "Manhattan CalculateDistance", "1.0.0.0")]
     public sealed class ManhattanDistance : IMetric
     {
         /// <summary>
@@ -19,7 +19,7 @@ namespace widemeadows.ml.kohonen.metrics
         /// <param name="b">The b.</param>
         /// <returns>System.Double.</returns>
         /// <exception cref="System.ArgumentException">Lengths of weight vectors differ.</exception>
-        public double Distance(IWeights a, IWeights b)
+        public double CalculateDistance(IWeights a, IWeights b)
         {
             var length = a.Length;
             if (length != b.Length) throw new ArgumentException("Lengths of weight vectors differ.");

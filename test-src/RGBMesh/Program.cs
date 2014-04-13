@@ -29,18 +29,24 @@ namespace widemeadows.ml.kohonen.tests.rgbmesh
             const int height = 4;
             const int count = width*height;
 
+            // prepare generator and randomized data set
             var generator = new StandardRng();
             var dataSet = new RgbDataSet(generator, count);
 
+            // prepare factories
             var gridFactory = new Grid2DFactory(generator);
             var neuronFactory = new RandomWeightGenerator(3);
 
+            // prepare the metric
             var metric = new ManhattanDistance();
+            var bmuFinder = new BmuFinder(metric);
 
-
+            // prepare the grid
             var grid = gridFactory.CreateGrid(width, height, neuronFactory);
             
+            // pick a datum and find the best matching unit on the grid
             var picked = dataSet.PickRandom(generator);
+            var bmu = bmuFinder.FindBestMatchingUnit(grid, picked);
         }
     }
 }

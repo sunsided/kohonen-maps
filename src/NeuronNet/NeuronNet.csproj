@@ -39,6 +39,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GridNeuron.cs" />
+    <Compile Include="BmuFinder.cs" />
     <Compile Include="RandomWeightGenerator.cs" />
     <Compile Include="WeightVector.cs" />
     <Compile Include="Neuron.cs" />

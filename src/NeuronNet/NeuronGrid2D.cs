@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using widemeadows.ml.kohonen.model;
 
 namespace widemeadows.ml.kohonen.net
@@ -70,5 +72,35 @@ namespace widemeadows.ml.kohonen.net
         /// </summary>
         /// <value>The dimensions.</value>
         public int Dimensions { get { return 2; }}
+
+        /// <summary>
+        /// Returns an enumerator that iterates through the collection.
+        /// </summary>
+        /// <returns>A <see cref="T:System.Collections.Generic.IEnumerator`1" /> that can be used to iterate through the collection.</returns>
+        public IEnumerator<IGridNeuron> GetEnumerator()
+        {
+            var width = _width;
+            var height = _height;
+            var neurons = _neurons;
+            for (int h = 0; h < height; ++h)
+            {
+                for (int w = 0; w < width; ++w)
+                {
+                    var coordinates = new [] {w, h};
+                    var neuron = neurons[w, h];
+
+                    yield return new GridNeuron(neuron, coordinates);
+                }
+            }
+        }
+
+        /// <summary>
+        /// Returns an enumerator that iterates through a collection.
+        /// </summary>
+        /// <returns>An <see cref="T:System.Collections.IEnumerator" /> object that can be used to iterate through the collection.</returns>
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
     }
 }

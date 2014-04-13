@@ -11,15 +11,15 @@ namespace widemeadows.ml.kohonen.net
         /// Gets or sets the vector.
         /// </summary>
         /// <value>The vector.</value>
-        public WeightVector Weight { get; set; }
+        public IWeights Weights { get; set; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Neuron" /> class.
         /// </summary>
-        /// <param name="weight">The weight.</param>
-        public Neuron(WeightVector weight)
+        /// <param name="weights">The Weights.</param>
+        public Neuron(IWeights weights)
         {
-            Weight = weight;
+            Weights = weights;
         }
     }
 }

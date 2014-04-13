@@ -12,6 +12,6 @@
         /// <param name="b">The b.</param>
         /// <returns>System.Double.</returns>
         /// <exception cref="System.ArgumentException">Lengths of weight vectors differ.</exception>
-        double Distance(IWeights a, IWeights b);
+        double CalculateDistance(IWeights a, IWeights b);
     }
 }
