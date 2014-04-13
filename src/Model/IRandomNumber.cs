@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace widemeadows.ml.kohonen.model
+﻿namespace widemeadows.ml.kohonen.model
 {
     /// <summary>
     /// Interface IRandomNumber
@@ -11,7 +9,7 @@ namespace widemeadows.ml.kohonen.model
         /// Sets the seed for the generator.
         /// </summary>
         /// <param name="seed">The seed.</param>
-        void SetSeed(int seed);
+        void SetSeed(long seed);
 
         /// <summary>
         /// Gets a <see cref="System.Double"/> value in the range of <paramref name="min"/> to <paramref name="max"/>.
@@ -19,6 +17,6 @@ namespace widemeadows.ml.kohonen.model
         /// <param name="min">The minimum value (inclusive).</param>
         /// <param name="max">The maximum value (inclusive).</param>
         /// <returns>System.Double.</returns>
-        double GetDouble(double min = -1, double max = 1);
+        double GetDouble(double min = 0, double max = 1);
     }
 }
