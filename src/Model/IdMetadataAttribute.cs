@@ -30,11 +30,38 @@ namespace widemeadows.ml.kohonen.model
         /// <param name="id">The identifier.</param>
         /// <param name="name">The name.</param>
         /// <param name="version">The version.</param>
+        /// <exception cref="System.ArgumentException">The given ID string was not a valid GUID format.;id</exception>
+        /// <exception cref="System.ArgumentException">The given version string was not a valid Version format.;version</exception>
         public IdMetadataAttribute(string id, string name, string version)
         {
+            ValidateGuid(id);
+            ValidateVersion(version);
+
             Id = id;
             Name = name;
             Version = version;
+        }
+
+        /// <summary>
+        /// Validates the version.
+        /// </summary>
+        /// <param name="version">The version.</param>
+        /// <exception cref="System.ArgumentException">The given version string was not a valid Version format.;version</exception>
+        private static void ValidateVersion(string version)
+        {
+            Version ignored;
+            if (!System.Version.TryParse(version, out ignored)) throw new ArgumentException("The given version string was not a valid Version format.", "version");
+        }
+
+        /// <summary>
+        /// Validates the unique identifier.
+        /// </summary>
+        /// <param name="id">The identifier.</param>
+        /// <exception cref="System.ArgumentException">The given ID string was not a valid GUID format.;id</exception>
+        private static void ValidateGuid(string id)
+        {
+            Guid ignored;
+            if (!Guid.TryParse(id, out ignored)) throw new ArgumentException("The given ID string was not a valid GUID format.", "id");
         }
     }
 }
