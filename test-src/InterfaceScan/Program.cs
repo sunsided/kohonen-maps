@@ -15,7 +15,7 @@ namespace widemeadows.ml.kohonen.tests.interfacescan
         }
 
         [ImportMany(typeof(IRandomNumber))]
-        private IEnumerable<Lazy<IRandomNumber, Dictionary<string, object>>> _rngs = null;
+        private IEnumerable<Lazy<IRandomNumber, IMetadata>> _rngs = null;
 
         /// <summary>
         /// Runs this instance.
@@ -28,9 +28,9 @@ namespace widemeadows.ml.kohonen.tests.interfacescan
 
             foreach (var contract in _rngs)
             {
-                object name, version;
-                contract.Metadata.TryGetValue("Name", out name);
-                contract.Metadata.TryGetValue("Version", out version);
+                var name = contract.Metadata.Name;
+                var version = contract.Metadata.Version;
+                var id = contract.Metadata.Id;
                 
                 Console.WriteLine("Selecting \"{0}\", Version {1}", name, version);
 

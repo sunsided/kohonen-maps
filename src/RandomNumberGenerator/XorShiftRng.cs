@@ -9,8 +9,7 @@ namespace RandomNumberGenerator
     /// Class XorShiftRng. This class cannot be inherited.
     /// </summary>
     [Export(typeof(IRandomNumber))]
-    [ExportMetadata("Name", "XorShift RNG")]
-    [ExportMetadata("Version", "1.0.0.0")]
+    [IdMetadataAttribute("BE09E456-5815-4821-97FD-3E5652D002C2", "XorShift RNG", "1.0.0.0")]
     public sealed class XorShiftRng : IRandomNumber
     {
         /// <summary>
