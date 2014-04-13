@@ -25,7 +25,7 @@ namespace RGBMesh
         {
             var generator = new StandardRng();
             var gridFactory = new Grid2DFactory(generator);
-            var neuronFactory = new ColorRandomizer();
+            var neuronFactory = new RandomWeightGenerator(3);
 
             const int width = 4;
             const int height = 4;

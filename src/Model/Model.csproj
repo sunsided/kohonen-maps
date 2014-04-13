@@ -46,7 +46,7 @@
     <Compile Include="IRandomNeuronFactory.cs" />
     <Compile Include="IRandomNumber.cs" />
     <Compile Include="IdMetadataAttribute.cs" />
-    <Compile Include="IVector.cs" />
+    <Compile Include="IWeights.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
