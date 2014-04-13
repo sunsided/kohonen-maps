@@ -7,18 +7,18 @@ namespace widemeadows.ml.kohonen.net
     /// <summary>
     /// Class DoubleVector. This class cannot be inherited.
     /// </summary>
-    public class DoubleVector : IEnumerable<double>, IVector
+    public class WeightVector : IEnumerable<double>, IWeights
     {
         /// <summary>
-        /// The values
+        /// The weights
         /// </summary>
-        private readonly double[] _values;
+        private readonly double[] _weights;
 
         /// <summary>
         /// Gets the length.
         /// </summary>
         /// <value>The length.</value>
-        public int Length { get { return _values.Length; }}
+        public int Length { get { return _weights.Length; }}
 
         /// <summary>
         /// Gets the <see cref="System.Double"/> at the specified index.
@@ -27,26 +27,26 @@ namespace widemeadows.ml.kohonen.net
         /// <returns>System.Double.</returns>
         public double this[int index]
         {
-            get { return _values[index]; }
-            set { _values[index] = value; }
+            get { return _weights[index]; }
+            set { _weights[index] = value; }
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="DoubleVector"/> class.
+        /// Initializes a new instance of the <see cref="WeightVector"/> class.
         /// </summary>
         /// <param name="dimensions">The dimensions.</param>
-        public DoubleVector(int dimensions)
+        public WeightVector(int dimensions)
         {
-            _values = new double[dimensions];
+            _weights = new double[dimensions];
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="DoubleVector"/> class.
+        /// Initializes a new instance of the <see cref="WeightVector"/> class.
         /// </summary>
-        /// <param name="values">The values.</param>
-        public DoubleVector(double[] values)
+        /// <param name="weights">The weights.</param>
+        public WeightVector(double[] weights)
         {
-            _values = values;
+            _weights = weights;
         }
 
         /// <summary>
@@ -55,7 +55,7 @@ namespace widemeadows.ml.kohonen.net
         /// <returns>A <see cref="T:System.Collections.Generic.IEnumerator`1" /> that can be used to iterate through the collection.</returns>
         public IEnumerator<double> GetEnumerator()
         {
-            return ((IEnumerable<double>) _values).GetEnumerator();
+            return ((IEnumerable<double>) _weights).GetEnumerator();
         }
 
         /// <summary>

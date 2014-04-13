@@ -5,21 +5,21 @@ namespace widemeadows.ml.kohonen.net
     /// <summary>
     /// Class DoubleVectorNeuron. This class cannot be inherited.
     /// </summary>
-    public sealed class DoubleVectorNeuron : INeuron
+    public sealed class Neuron : INeuron
     {
         /// <summary>
         /// Gets or sets the vector.
         /// </summary>
         /// <value>The vector.</value>
-        public DoubleVector Vector { get; set; }
+        public WeightVector Weight { get; set; }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="DoubleVectorNeuron" /> class.
+        /// Initializes a new instance of the <see cref="Neuron" /> class.
         /// </summary>
-        /// <param name="vector">The vector.</param>
-        public DoubleVectorNeuron(DoubleVector vector)
+        /// <param name="weight">The weight.</param>
+        public Neuron(WeightVector weight)
         {
-            Vector = vector;
+            Weight = weight;
         }
     }
 }

@@ -9,7 +9,7 @@ namespace RGBMesh
     /// Class RGBVector.
     /// </summary>
     [DebuggerDisplay("{this[0]}, {this[1]}, {this[2]}")]
-    class RGBVector : DoubleVector
+    class RGBVector : WeightVector
     {
         /// <summary>
         /// Gets or sets the color.

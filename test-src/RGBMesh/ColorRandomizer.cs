@@ -19,7 +19,7 @@ namespace RGBMesh
             var g = generator.GetDouble(0, 1);
             var b = generator.GetDouble(0, 1);
             var vector = new RGBVector(r, g, b);
-            var neuron = new DoubleVectorNeuron(vector);
+            var neuron = new Neuron(vector);
             return neuron;
         }
     }
