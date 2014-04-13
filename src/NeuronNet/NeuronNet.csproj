@@ -42,11 +42,13 @@
     <Compile Include="GridNeuron.cs" />
     <Compile Include="BmuFinder.cs" />
     <Compile Include="RandomWeightGenerator.cs" />
+    <Compile Include="WeightAdjustment.cs" />
     <Compile Include="WeightVector.cs" />
     <Compile Include="Neuron.cs" />
     <Compile Include="Grid2DFactory.cs" />
     <Compile Include="NeuronGrid2D.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WeightVectorExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Model\Model.csproj">

@@ -50,6 +50,19 @@ namespace widemeadows.ml.kohonen.net
         }
 
         /// <summary>
+        /// Initializes a new instance of the <see cref="WeightVector"/> class.
+        /// </summary>
+        /// <param name="weights">The weights.</param>
+        public WeightVector(IWeights weights)
+            : this(weights.Length)
+        {
+            for (var i = 0; i < weights.Length; ++i)
+            {
+                this[i] = weights[i];
+            }
+        }
+
+        /// <summary>
         /// Returns an enumerator that iterates through the collection.
         /// </summary>
         /// <returns>A <see cref="T:System.Collections.Generic.IEnumerator`1" /> that can be used to iterate through the collection.</returns>
