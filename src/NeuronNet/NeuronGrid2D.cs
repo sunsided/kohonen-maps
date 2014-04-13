@@ -86,7 +86,7 @@ namespace widemeadows.ml.kohonen.net
             {
                 for (int w = 0; w < width; ++w)
                 {
-                    var coordinates = new [] {w, h};
+                    var coordinates = new double[] { w, h };
                     var neuron = neurons[w, h];
 
                     yield return new GridNeuron(neuron, coordinates);

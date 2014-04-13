@@ -1,6 +1,7 @@
 ﻿using System.Drawing;
 using RandomNumberGenerator;
 using widemeadows.ml.kohonen.metrics;
+using widemeadows.ml.kohonen.neighborhoods;
 using widemeadows.ml.kohonen.net;
 
 namespace widemeadows.ml.kohonen.tests.rgbmesh
@@ -29,6 +30,9 @@ namespace widemeadows.ml.kohonen.tests.rgbmesh
             const int height = 4;
             const int count = width*height;
 
+            const int totalIterations = 10;
+            const double baseRadius = 16.0;
+
             // prepare generator and randomized data set
             var generator = new StandardRng();
             var dataSet = new RgbDataSet(generator, count);
@@ -43,10 +47,34 @@ namespace widemeadows.ml.kohonen.tests.rgbmesh
 
             // prepare the grid
             var grid = gridFactory.CreateGrid(width, height, neuronFactory);
-            
-            // pick a datum and find the best matching unit on the grid
-            var picked = dataSet.PickRandom(generator);
-            var bmu = bmuFinder.FindBestMatchingUnit(grid, picked);
+
+            // prepare adjustment functions
+            var radiusFunction = new RadiusExponentialShrink(totalIterations, baseRadius);
+            var neighborhoodFunction = new GaussianNeighborhood();
+            var learningRateFunction = new LearningRateExponentialShrink(totalIterations, baseRadius);
+            var weightAdjustment = new WeightAdjustment(radiusFunction, neighborhoodFunction, learningRateFunction);
+
+            // iterate
+            for (int i = 0; i < totalIterations; ++i)
+            {
+                // pick a datum and find the best matching unit on the grid
+                var picked = dataSet.PickRandom(generator);
+                var bmu = bmuFinder.FindBestMatchingUnit(grid, picked);
+
+                // adjust all other neurons
+                var trainingVectorWeights = picked.MapToWeights();
+                foreach (var gridNeuron in grid)
+                {
+                    var currentWeights = gridNeuron.Neuron.Weights;
+                    var distanceToBmu = metric.CalculateDistance(bmu.GridCoordinates, gridNeuron.GridCoordinates);
+
+                    // calculate the new weights
+                    var newWeights = weightAdjustment.CalculateNewWeights(i, trainingVectorWeights, currentWeights, distanceToBmu);
+
+                    // update the neuron with the new weights
+                    gridNeuron.Neuron.UpdateWeights(newWeights);
+                }
+            }
         }
     }
 }

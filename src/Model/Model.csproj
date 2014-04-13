@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IBestMatchingUnit.cs" />
     <Compile Include="IGridNeuron.cs" />
     <Compile Include="IBmuFinder.cs" />
     <Compile Include="IDataSet.cs" />

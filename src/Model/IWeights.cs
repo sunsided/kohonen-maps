@@ -1,4 +1,6 @@
-﻿namespace widemeadows.ml.kohonen.model
+﻿using System.Collections.Generic;
+
+namespace widemeadows.ml.kohonen.model
 {
     /// <summary>
     /// Interface IWeights
@@ -20,5 +22,18 @@
         {
             get; set;
         }
+
+        /// <summary>
+        /// Updates the weights.
+        /// </summary>
+        /// <param name="newWeights">The new weights.</param>
+        /// <exception cref="System.ArgumentException">Lengths of weight vectors differ.</exception>
+        void Update(IWeights newWeights);
+
+        /// <summary>
+        /// Gets as list.
+        /// </summary>
+        /// <value>As list.</value>
+        IReadOnlyList<double> AsReadOnlyList { get; }
     }
 }

@@ -18,14 +18,14 @@ namespace widemeadows.ml.kohonen.net
         /// Gets the grid coordinates.
         /// </summary>
         /// <value>The grid coordinates.</value>
-        public IList<int> GridCoordinates { get; private set; }
+        public IReadOnlyList<double> GridCoordinates { get; private set; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="GridNeuron"/> class.
         /// </summary>
         /// <param name="neuron">The neuron.</param>
         /// <param name="gridCoordinates">The grid coordinates.</param>
-        public GridNeuron(INeuron neuron, IList<int> gridCoordinates)
+        public GridNeuron(INeuron neuron, IReadOnlyList<double> gridCoordinates)
         {
             Neuron = neuron;
             GridCoordinates = gridCoordinates;

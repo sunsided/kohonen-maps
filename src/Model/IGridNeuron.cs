@@ -17,6 +17,6 @@ namespace widemeadows.ml.kohonen.model
         /// Gets the grid coordinates.
         /// </summary>
         /// <value>The grid coordinates.</value>
-        IList<int> GridCoordinates { get; }
+        IReadOnlyList<double> GridCoordinates { get; }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using widemeadows.ml.kohonen.model;
 
@@ -30,6 +31,26 @@ namespace widemeadows.ml.kohonen.net
             get { return _weights[index]; }
             set { _weights[index] = value; }
         }
+
+        /// <summary>
+        /// Updates the weights.
+        /// </summary>
+        /// <param name="newWeights">The new weights.</param>
+        /// <exception cref="System.ArgumentException">Lengths of weight vectors differ.</exception>
+        public void Update(IWeights newWeights)
+        {
+            if (newWeights.Length != _weights.Length) throw new ArgumentException("Lengths of weight vectors differ.");
+            for (var i = 0; i < newWeights.Length; ++i)
+            {
+                this[i] = newWeights[i];
+            }
+        }
+
+        /// <summary>
+        /// Gets as list.
+        /// </summary>
+        /// <value>As list.</value>
+        public IReadOnlyList<double> AsReadOnlyList { get { return _weights; } }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="WeightVector"/> class.
