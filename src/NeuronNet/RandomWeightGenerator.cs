@@ -1,8 +1,7 @@
 ﻿using System;
 using widemeadows.ml.kohonen.model;
-using widemeadows.ml.kohonen.net;
 
-namespace RGBMesh
+namespace widemeadows.ml.kohonen.net
 {
     /// <summary>
     /// Class ColorRandomizer.

@@ -1,7 +1,9 @@
-﻿using RandomNumberGenerator;
+﻿using System.Drawing;
+using RandomNumberGenerator;
+using widemeadows.ml.kohonen.metrics;
 using widemeadows.ml.kohonen.net;
 
-namespace RGBMesh
+namespace widemeadows.ml.kohonen.tests.rgbmesh
 {
     /// <summary>
     /// Class Program.
@@ -33,9 +35,12 @@ namespace RGBMesh
             var gridFactory = new Grid2DFactory(generator);
             var neuronFactory = new RandomWeightGenerator(3);
 
+            var metric = new ManhattanDistance();
+
+
             var grid = gridFactory.CreateGrid(width, height, neuronFactory);
             
-            var lol = dataSet.PickRandom(generator);
+            var picked = dataSet.PickRandom(generator);
         }
     }
 }

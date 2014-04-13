@@ -7,7 +7,7 @@
     <ProjectGuid>{2CC77E3A-90E4-4D05-8F9F-6BA63858FC11}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>RGBMesh</RootNamespace>
+    <RootNamespace>widemeadows.ml.kohonen.tests.rgbmesh</RootNamespace>
     <AssemblyName>RGBMesh</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ColorDatum.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RgbDataSet.cs" />
@@ -50,6 +51,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\src\Metrics\Metrics.csproj">
+      <Project>{23C08511-336A-44D3-96FC-1919E037EDCA}</Project>
+      <Name>Metrics</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\src\Model\Model.csproj">
       <Project>{31069D8C-1779-460E-AA06-5CD126AEDE9F}</Project>
       <Name>Model</Name>
