@@ -25,12 +25,12 @@ namespace RGBMeshGUI
         /// </summary>
         private void Run()
         {
-            const int width = 16;
-            const int height = 16;
+            const int width = 32;
+            const int height = 32;
             const int count = width * height;
 
             const int totalIterations = 100;
-            double baseRadius = Math.Sqrt(count);
+            double baseRadius = Math.Sqrt(count)/2;
 
             // prepare generator and randomized data set
             var generator = new StandardRng();
@@ -50,7 +50,7 @@ namespace RGBMeshGUI
             // prepare adjustment functions
             var radiusFunction = new RadiusExponentialShrink(totalIterations, baseRadius);
             var neighborhoodFunction = new GaussianNeighborhood();
-            var learningRateFunction = new LearningRateExponentialShrink(totalIterations, 0.5);
+            var learningRateFunction = new LearningRateExponentialShrink(totalIterations, 5);
             var weightAdjustment = new WeightAdjustment(radiusFunction, neighborhoodFunction, learningRateFunction);
 
             // iterate
