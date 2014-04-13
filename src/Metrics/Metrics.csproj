@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ManhattanDistance.cs" />
+    <Compile Include="EuclideanDistance.cs" />
     <Compile Include="SquaredEuclideanDistance.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

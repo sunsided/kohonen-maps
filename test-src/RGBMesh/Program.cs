@@ -42,7 +42,7 @@ namespace widemeadows.ml.kohonen.tests.rgbmesh
             var neuronFactory = new RandomWeightGenerator(3);
 
             // prepare the metric
-            var metric = new ManhattanDistance();
+            var metric = new EuclideanDistance();
             var bmuFinder = new BmuFinder(metric);
 
             // prepare the grid
@@ -65,10 +65,10 @@ namespace widemeadows.ml.kohonen.tests.rgbmesh
                 var trainingVectorWeights = picked.MapToWeights();
                 foreach (var gridNeuron in grid)
                 {
-                    var currentWeights = gridNeuron.Neuron.Weights;
                     var distanceToBmu = metric.CalculateDistance(bmu.GridCoordinates, gridNeuron.GridCoordinates);
 
                     // calculate the new weights
+                    var currentWeights = gridNeuron.Neuron.Weights;
                     var newWeights = weightAdjustment.CalculateNewWeights(i, trainingVectorWeights, currentWeights, distanceToBmu);
 
                     // update the neuron with the new weights
