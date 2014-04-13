@@ -1,21 +1,20 @@
-﻿using System.Drawing;
+﻿using System;
+using System.Windows.Forms;
 using RandomNumberGenerator;
 using widemeadows.ml.kohonen.metrics;
 using widemeadows.ml.kohonen.neighborhoods;
 using widemeadows.ml.kohonen.net;
+using widemeadows.ml.kohonen.tests.rgbmesh;
 
-namespace widemeadows.ml.kohonen.tests.rgbmesh
+namespace RGBMeshGUI
 {
-    /// <summary>
-    /// Class Program.
-    /// </summary>
     class Program
     {
         /// <summary>
-        /// Defines the entry point of the application.
+        /// The main entry point for the application.
         /// </summary>
-        /// <param name="args">The arguments.</param>
-        static void Main(string[] args)
+        [STAThread]
+        static void Main()
         {
             var program = new Program();
             program.Run();
@@ -26,12 +25,12 @@ namespace widemeadows.ml.kohonen.tests.rgbmesh
         /// </summary>
         private void Run()
         {
-            const int width = 4;
-            const int height = 4;
-            const int count = width*height;
+            const int width = 16;
+            const int height = 16;
+            const int count = width * height;
 
             const int totalIterations = 100;
-            const double baseRadius = 4.0;
+            double baseRadius = Math.Sqrt(count);
 
             // prepare generator and randomized data set
             var generator = new StandardRng();
@@ -51,7 +50,7 @@ namespace widemeadows.ml.kohonen.tests.rgbmesh
             // prepare adjustment functions
             var radiusFunction = new RadiusExponentialShrink(totalIterations, baseRadius);
             var neighborhoodFunction = new GaussianNeighborhood();
-            var learningRateFunction = new LearningRateExponentialShrink(totalIterations, baseRadius);
+            var learningRateFunction = new LearningRateExponentialShrink(totalIterations, 0.5);
             var weightAdjustment = new WeightAdjustment(radiusFunction, neighborhoodFunction, learningRateFunction);
 
             // iterate
@@ -75,6 +74,13 @@ namespace widemeadows.ml.kohonen.tests.rgbmesh
                     gridNeuron.Neuron.UpdateWeights(newWeights);
                 }
             }
+
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+
+            var form = new Main();
+            form.SetGrid(grid);
+            Application.Run(form);
         }
     }
 }

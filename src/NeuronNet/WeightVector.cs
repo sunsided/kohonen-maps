@@ -59,6 +59,10 @@ namespace widemeadows.ml.kohonen.net
         public WeightVector(int dimensions)
         {
             _weights = new double[dimensions];
+            for (int i = 0; i < dimensions; ++i)
+            {
+                _weights[i] = Double.NaN;
+            }
         }
 
         /// <summary>
@@ -66,8 +70,12 @@ namespace widemeadows.ml.kohonen.net
         /// </summary>
         /// <param name="weights">The weights.</param>
         public WeightVector(double[] weights)
+            : this(weights.Length)
         {
-            _weights = weights;
+            for (var i = 0; i < weights.Length; ++i)
+            {
+                this[i] = weights[i];
+            }
         }
 
         /// <summary>

@@ -46,9 +46,11 @@ namespace widemeadows.ml.kohonen.net
         public IWeights CalculateNewWeights(int iteration, IWeights trainingVector, IWeights currentWeights, double distance)
         {
             var radius = _radiusFunction.CalculateRadius(iteration);
-            var n = _neighboorFunction.CalculateFactor(distance, radius);
-            var l = _learningRate.CalculateLearningRate(iteration);
-            var factor = n*l;
+            var h = _neighboorFunction.CalculateFactor(distance, radius);
+            var epsilon = _learningRate.CalculateLearningRate(iteration);
+            var factor = h*epsilon;
+
+            // Ritter et al. (1991)
 
             // calculate V(t)-W(t)
             var delta = trainingVector.Subtract(currentWeights);

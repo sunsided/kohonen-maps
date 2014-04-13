@@ -38,7 +38,7 @@ namespace widemeadows.ml.kohonen.net
 
             // prepare search
             var metric = _metric;
-            var smallestDistance = Double.MaxValue;
+            var smallestDistance = Double.NaN;
             var bmu = null as IGridNeuron;
 
             // linear search
@@ -46,7 +46,7 @@ namespace widemeadows.ml.kohonen.net
             {
                 var weigths = gridNeuron.Neuron.Weights;
                 var distance = metric.CalculateDistance(referenceWeighs, weigths);
-                if (!(distance < smallestDistance)) continue;
+                if (!(Double.IsNaN(smallestDistance) || distance < smallestDistance)) continue;
 
                 smallestDistance = distance;
                 bmu = gridNeuron;

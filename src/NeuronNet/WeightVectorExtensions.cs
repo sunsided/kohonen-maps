@@ -30,7 +30,7 @@ namespace widemeadows.ml.kohonen.net
         /// <returns>The result of the operator.</returns>
         public static IWeights Add(this IWeights a, IWeights b)
         {
-            var weights = new WeightVector(a.Length);
+            var weights = new WeightVector(a);
             return AddInPlace(weights, b);
         }
 
@@ -58,7 +58,7 @@ namespace widemeadows.ml.kohonen.net
         /// <returns>The result of the operator.</returns>
         public static IWeights AddScaled(this IWeights a, IWeights b, double s)
         {
-            var weights = new WeightVector(a.Length);
+            var weights = new WeightVector(a);
             return AddScaledInPlace(weights, b, s);
         }
 
@@ -86,7 +86,7 @@ namespace widemeadows.ml.kohonen.net
         /// <returns>The result of the operator.</returns>
         public static IWeights Subtract(this IWeights a, IWeights b)
         {
-            var weights = new WeightVector(a.Length);
+            var weights = new WeightVector(a);
             return SubtractInPlace(weights, b);
         }
 
@@ -113,7 +113,7 @@ namespace widemeadows.ml.kohonen.net
         /// <returns>The result of the operator.</returns>
         public static IWeights Scale(IWeights a, double s)
         {
-            var weights = new WeightVector(a.Length);
+            var weights = new WeightVector(a);
             return ScaleInPlace(weights, s);
         }
 
