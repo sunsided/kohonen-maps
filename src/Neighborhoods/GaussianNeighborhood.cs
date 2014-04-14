@@ -9,7 +9,7 @@ namespace widemeadows.ml.kohonen.neighborhoods
     /// </summary>
     [Export(typeof(INeighborhoodFunction))]
     [PartCreationPolicy(CreationPolicy.Shared)]
-    [IdMetadataAttribute("2114FB74-91EF-47AB-AC8D-AEE5A076746B", "Gaussian Neighborhood", "1.0.0.0")]
+    [IdMetadataAttribute("2114FB74-91EF-47AB-AC8D-AEE5A076746B", "Gaussian", "1.0.0.0")]
     public sealed class GaussianNeighborhood : INeighborhoodFunction
     {
         /// <summary>
@@ -20,7 +20,7 @@ namespace widemeadows.ml.kohonen.neighborhoods
         /// <returns>System.Double.</returns>
         public double CalculateFactor(double distance, double radius)
         {
-            return Math.Exp(-(distance*distance)/(radius*radius));
+            return Math.Exp(-(distance * distance) / (radius * radius));
         }
     }
 }
