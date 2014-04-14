@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MexicanHatNeighborhood.cs" />
     <Compile Include="LearningRateExponentialShrink.cs" />
     <Compile Include="RadiusExponentialShrink.cs" />
     <Compile Include="GaussianNeighborhood.cs" />
