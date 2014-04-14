@@ -10,7 +10,7 @@ namespace widemeadows.ml.kohonen.metrics
     /// </summary>
     [Export(typeof(IMetric))]
     [PartCreationPolicy(CreationPolicy.Shared)]
-    [IdMetadataAttribute("E4923798-678D-48DD-81E1-1C5D01DD7B79", "Squared Euclidean CalculateDistance", "1.0.0.0")]
+    [IdMetadataAttribute("E4923798-678D-48DD-81E1-1C5D01DD7B79", "Squared Euclidean Distance", "1.0.0.0")]
     public sealed class SquaredEuclideanDistance : IMetric
     {
         /// <summary>
