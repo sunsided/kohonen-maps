@@ -47,6 +47,7 @@
     <Compile Include="IDatum.cs" />
     <Compile Include="IGrid.cs" />
     <Compile Include="IGrid2D.cs" />
+    <Compile Include="IIterationDependent.cs" />
     <Compile Include="ILearningRate.cs" />
     <Compile Include="IMetadata.cs" />
     <Compile Include="IMetric.cs" />

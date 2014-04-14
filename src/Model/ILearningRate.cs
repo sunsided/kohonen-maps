@@ -3,8 +3,18 @@
     /// <summary>
     /// Interface ILearningRate
     /// </summary>
-    public interface ILearningRate
+    public interface ILearningRate : IIterationDependent
     {
+        /// <summary>
+        /// The starting learning rate
+        /// </summary>
+        double StartRate { get; set; }
+        
+        /// <summary>
+        /// The end learning rate
+        /// </summary>
+        double EndRate { get; set; }
+
         /// <summary>
         /// Calculates the learning rate.
         /// </summary>

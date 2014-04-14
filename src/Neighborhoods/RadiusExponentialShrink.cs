@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.Composition;
+﻿using System;
+using System.ComponentModel.Composition;
 using widemeadows.ml.kohonen.model;
 
 namespace widemeadows.ml.kohonen.neighborhoods
@@ -8,19 +9,20 @@ namespace widemeadows.ml.kohonen.neighborhoods
     /// </summary>
     [Export(typeof(IRadiusFunction))]
     [PartCreationPolicy(CreationPolicy.NonShared)]
-    [IdMetadataAttribute("075CC788-B067-4BEA-88E0-7E89EEC693EE", "Exponential Shrink", "1.0.0.0")]
-    public sealed class RadiusExponentialShrink : ExponentialShrink, IRadiusFunction
+    [IdMetadataAttribute("075CC788-B067-4BEA-88E0-7E89EEC693EE", "Exponential Decay", "1.0.0.0")]
+    public sealed class RadiusExponentialShrink : IRadiusFunction
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="RadiusExponentialShrink"/> class.
+        /// The number of total iterations
         /// </summary>
-        /// <param name="totalIterations">The total number of iterations.</param>
-        /// <param name="baseRadius">The base radius.</param>
-        [ImportingConstructor]
-        public RadiusExponentialShrink([Import("TotalIterations")] int totalIterations, [Import("BaseRadius")] double baseRadius)
-            : base(totalIterations, baseRadius)
-        {
-        }
+        [Import("TotalIterations", AllowDefault = true)]
+        public int TotalIterations { get; set; }
+
+        /// <summary>
+        /// The starting learning rate
+        /// </summary>
+        [Import("StartRadius", AllowDefault = true)]
+        public double StartRadius { get; set; }
 
         /// <summary>
         /// Calculates the radius.
@@ -29,7 +31,10 @@ namespace widemeadows.ml.kohonen.neighborhoods
         /// <returns>System.Double.</returns>
         public double CalculateRadius(int iteration)
         {
-            return Calculate(iteration);
+            var totalIterations = (double)TotalIterations;
+            var radius = StartRadius;
+
+            return radius * Math.Exp(-(double)iteration / totalIterations / Math.Log(radius));
         }
     }
 }

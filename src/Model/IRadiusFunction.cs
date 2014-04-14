@@ -6,6 +6,11 @@
     public interface IRadiusFunction
     {
         /// <summary>
+        /// The starting radius
+        /// </summary>
+        double StartRadius { get; set; }
+
+        /// <summary>
         /// Calculates the radius.
         /// </summary>
         /// <param name="iteration">The iteration.</param>
