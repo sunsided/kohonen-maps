@@ -61,6 +61,7 @@
             // toolStripElements
             // 
             this.toolStripElements.Dock = System.Windows.Forms.DockStyle.None;
+            this.toolStripElements.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStripElements.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripDropDownButtonRngs,
             this.toolStripDropDownButtonMetrics,
@@ -69,7 +70,7 @@
             this.toolStripDropDownButtonLearningRate});
             this.toolStripElements.Location = new System.Drawing.Point(3, 0);
             this.toolStripElements.Name = "toolStripElements";
-            this.toolStripElements.Size = new System.Drawing.Size(476, 25);
+            this.toolStripElements.Size = new System.Drawing.Size(467, 25);
             this.toolStripElements.TabIndex = 0;
             // 
             // toolStripDropDownButtonRngs
