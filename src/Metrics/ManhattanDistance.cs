@@ -22,6 +22,9 @@ namespace widemeadows.ml.kohonen.metrics
         /// <exception cref="System.ArgumentException">Lengths of weight vectors differ.</exception>
         public double CalculateDistance(IWeights a, IWeights b)
         {
+            var length = a.Length;
+            if (length != b.Length) throw new ArgumentException("Lengths of weight vectors differ.");
+
             return CalculateDistance(a.AsReadOnlyList, b.AsReadOnlyList);
         }
 
@@ -31,7 +34,7 @@ namespace widemeadows.ml.kohonen.metrics
         /// <param name="a">A.</param>
         /// <param name="b">The b.</param>
         /// <returns>System.Double.</returns>
-        /// <exception cref="System.ArgumentException">Lengths of weight vectors differ.</exception>
+        /// <exception cref="System.ArgumentException">Lengths of input vectors differ.</exception>
         public double CalculateDistance(IReadOnlyList<double> a, IReadOnlyList<double> b)
         {
             var length = a.Count;
