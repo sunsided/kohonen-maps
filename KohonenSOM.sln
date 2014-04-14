@@ -26,6 +26,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Neighborhoods", "src\Neighb
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RGBMeshGUI", "test-src\RGBMeshGUI\RGBMeshGUI.csproj", "{7551C286-707C-4E5B-A0F0-C0712D878393}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KohonenTestbench", "src\KohonenTestbench\KohonenTestbench.csproj", "{C0430320-36F6-47F7-A88D-E3B73972FB86}"
+	ProjectSection(ProjectDependencies) = postProject
+		{03C23207-E32C-4C68-9B6D-B9D1E1A50233} = {03C23207-E32C-4C68-9B6D-B9D1E1A50233}
+		{23C08511-336A-44D3-96FC-1919E037EDCA} = {23C08511-336A-44D3-96FC-1919E037EDCA}
+		{6C8E4033-007D-43CA-96BB-80BD88249911} = {6C8E4033-007D-43CA-96BB-80BD88249911}
+		{75C4A7F7-93B2-4474-9049-5B796327DA48} = {75C4A7F7-93B2-4474-9049-5B796327DA48}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -64,6 +72,10 @@ Global
 		{7551C286-707C-4E5B-A0F0-C0712D878393}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7551C286-707C-4E5B-A0F0-C0712D878393}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7551C286-707C-4E5B-A0F0-C0712D878393}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0430320-36F6-47F7-A88D-E3B73972FB86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0430320-36F6-47F7-A88D-E3B73972FB86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0430320-36F6-47F7-A88D-E3B73972FB86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0430320-36F6-47F7-A88D-E3B73972FB86}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
