@@ -30,7 +30,7 @@ namespace RGBMeshGUI
             const int count = width * height;
 
             const int totalIterations = 100;
-            double baseRadius = Math.Sqrt(count)/2;
+            double baseRadius = Math.Sqrt(count)*0.5;
 
             // prepare generator and randomized data set
             var generator = new StandardRng();
@@ -48,9 +48,17 @@ namespace RGBMeshGUI
             var grid = gridFactory.CreateGrid(width, height, neuronFactory);
 
             // prepare adjustment functions
-            var radiusFunction = new RadiusExponentialShrink(totalIterations, baseRadius);
+            var radiusFunction = new RadiusExponentialShrink()
+                                 {
+                                     TotalIterations = totalIterations,
+                                     StartRadius = baseRadius
+                                 };
             var neighborhoodFunction = new GaussianNeighborhood();
-            var learningRateFunction = new LearningRateExponentialShrink(totalIterations, 5);
+            var learningRateFunction = new LearningRateExponentialShrink()
+                                       {
+                                           TotalIterations = totalIterations,
+                                           StartRate = 2
+                                       };
             var weightAdjustment = new WeightAdjustment(radiusFunction, neighborhoodFunction, learningRateFunction);
 
             // iterate
