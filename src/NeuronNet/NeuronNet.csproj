@@ -31,19 +31,29 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GridNeuron.cs" />
-    <Compile Include="BmuFinder.cs" />
-    <Compile Include="RandomWeightGenerator.cs" />
-    <Compile Include="WeightAdjustment.cs" />
-    <Compile Include="WeightVector.cs" />
-    <Compile Include="Neuron.cs" />
-    <Compile Include="Grid2DFactory.cs" />
-    <Compile Include="NeuronGrid2D.cs" />
+    <Compile Include="Grid\GridNeuron.cs" />
+    <Compile Include="Grid\BmuFinder.cs" />
+    <Compile Include="Learning\EuclideanDistance.cs" />
+    <Compile Include="Learning\GaussianNeighborhood.cs" />
+    <Compile Include="Learning\LearningRateExponentialShrink.cs" />
+    <Compile Include="Learning\ManhattanDistance.cs" />
+    <Compile Include="Learning\MexicanHatNeighborhood.cs" />
+    <Compile Include="Learning\RadiusExponentialShrink.cs" />
+    <Compile Include="Learning\SquaredEuclideanDistance.cs" />
+    <Compile Include="Neuron\RandomWeightGenerator.cs" />
+    <Compile Include="Random\StandardRng.cs" />
+    <Compile Include="Random\XorShiftRng.cs" />
+    <Compile Include="Neuron\WeightAdjustment.cs" />
+    <Compile Include="Neuron\WeightVector.cs" />
+    <Compile Include="Neuron\Neuron.cs" />
+    <Compile Include="Grid\Grid2DFactory.cs" />
+    <Compile Include="Grid\NeuronGrid2D.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="WeightVectorExtensions.cs" />
+    <Compile Include="Neuron\WeightVectorExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Model\Model.csproj">
