@@ -34,7 +34,8 @@ namespace RGBMeshGUI
 
             // prepare generator and randomized data set
             var generator = new StandardRng();
-            var dataSet = new DiscreteRandomRgbDataSet(generator, 100);
+            var dataSetProvider = new DiscreteRandomRgbDataSetProvider(generator, 100);
+            var dataSet = dataSetProvider.ProvideDataSet();
 
             // prepare factories
             var gridFactory = new Grid2DFactory(generator);

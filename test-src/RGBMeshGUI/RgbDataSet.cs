@@ -10,7 +10,7 @@ namespace widemeadows.ml.kohonen.tests.rgbmesh
     /// <summary>
     /// Class RgbDataSet.
     /// </summary>
-    class DiscreteRandomRgbDataSet : IDataSet, IRgbDataSet
+    class RgbDataSet : IRgbDataSet
     {
         /// <summary>
         /// The colors
@@ -21,43 +21,15 @@ namespace widemeadows.ml.kohonen.tests.rgbmesh
         /// Gets the colors.
         /// </summary>
         /// <value>The colors.</value>
-        public Color[] Colors
-        {
-            get { return _colors; }
-        }
+        public Color[] Colors { get { return _colors; } }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="RgbDataSet" /> class.
         /// </summary>
-        /// <param name="generator">The generator.</param>
-        /// <param name="size">The size of the data set.</param>
-        public DiscreteRandomRgbDataSet(IRandomNumber generator, int size)
+        /// <param name="colors">The colors.</param>
+        public RgbDataSet(IEnumerable<Color> colors)
         {
-            _colors = new Color[size];
-            for (int i = 0; i < size; ++i)
-            {
-                Color c;
-
-                var r = generator.GetDouble();
-                if (r < 0.25)
-                {
-                    c = Color.OrangeRed;
-                }
-                else if (r < 0.5)
-                {
-                    c = Color.LawnGreen;
-                }
-                else if (r < 0.75)
-                {
-                    c = Color.Magenta;
-                }
-                else
-                {
-                    c = Color.DeepSkyBlue;
-                }
-
-                _colors[i] = c;
-            }
+            _colors = colors.ToArray();
         }
 
         /// <summary>
@@ -72,7 +44,6 @@ namespace widemeadows.ml.kohonen.tests.rgbmesh
             var color = _colors[index];
             return new ColorDatum(color);
         }
-
 
         /// <summary>
         /// Gets a value indicating whether this data set supports editing.
