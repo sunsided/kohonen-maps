@@ -1,4 +1,6 @@
-﻿namespace Widemeadows.MachineLearning.Kohonen.Model.Neuron
+﻿using System;
+
+namespace Widemeadows.MachineLearning.Kohonen.Model.Neuron
 {
     /// <summary>
     /// Class WeightVectorExtensions.
@@ -86,6 +88,21 @@
         {
             var weights = new WeightVector(a);
             return SubtractInPlace(weights, b);
+        }
+
+        /// <summary>
+        /// Returns the absolute values
+        /// </summary>
+        /// <param name="a">A.</param>
+        /// <returns>The result of the operator.</returns>
+        public static IWeights Absolute(this IWeights a)
+        {
+            var weights = new WeightVector(a);
+            for (var i = 0; i < a.Length; ++i)
+            {
+                weights[i] = Math.Abs(weights[i]);
+            }
+            return weights;
         }
 
         /// <summary>
