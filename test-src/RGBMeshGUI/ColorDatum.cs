@@ -2,7 +2,7 @@
 using System.Drawing;
 using Widemeadows.MachineLearning.Kohonen.Model.Data;
 using Widemeadows.MachineLearning.Kohonen.Model.Neuron;
-using Widemeadows.MachineLearning.Kohonen.Net;
+using Widemeadows.MachineLearning.Kohonen.Neuron;
 
 namespace Widemeadows.MachineLearning.Kohonen.Tests.RgbMesh
 {

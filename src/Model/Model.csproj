@@ -46,7 +46,7 @@
     <Compile Include="Learning\IIterationDependent.cs" />
     <Compile Include="Learning\ILearningRate.cs" />
     <Compile Include="IMetadata.cs" />
-    <Compile Include="Learning\IMetric.cs" />
+    <Compile Include="Metrics\IMetric.cs" />
     <Compile Include="Learning\INeighborhoodFunction.cs" />
     <Compile Include="Neuron\INeuron.cs" />
     <Compile Include="Learning\IRadiusFunction.cs" />

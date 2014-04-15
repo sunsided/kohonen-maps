@@ -1,6 +1,6 @@
 ﻿using Widemeadows.MachineLearning.Kohonen.Model.Neuron;
 
-namespace Widemeadows.MachineLearning.Kohonen.Net
+namespace Widemeadows.MachineLearning.Kohonen.Neuron
 {
     /// <summary>
     /// Class DoubleVectorNeuron. This class cannot be inherited.

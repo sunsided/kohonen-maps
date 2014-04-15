@@ -1,9 +1,8 @@
 ﻿using System;
-using Widemeadows.MachineLearning.Kohonen.Model;
 using Widemeadows.MachineLearning.Kohonen.Model.Neuron;
 using Widemeadows.MachineLearning.Kohonen.Model.Random;
 
-namespace Widemeadows.MachineLearning.Kohonen.Net
+namespace Widemeadows.MachineLearning.Kohonen.Neuron
 {
     /// <summary>
     /// Class ColorRandomizer.
@@ -42,7 +41,7 @@ namespace Widemeadows.MachineLearning.Kohonen.Net
             }
 
             // create neuron
-            var neuron = new Neuron(weigths);
+            var neuron = new Kohonen.Neuron.Neuron(weigths);
             return neuron;
         }
     }

@@ -1,10 +1,9 @@
 ﻿using System;
-using Widemeadows.MachineLearning.Kohonen.Model;
 using Widemeadows.MachineLearning.Kohonen.Model.Grid;
 using Widemeadows.MachineLearning.Kohonen.Model.Neuron;
 using Widemeadows.MachineLearning.Kohonen.Model.Random;
 
-namespace Widemeadows.MachineLearning.Kohonen.Net
+namespace Widemeadows.MachineLearning.Kohonen.Grid
 {
     /// <summary>
     /// Class Grid2DFactory.

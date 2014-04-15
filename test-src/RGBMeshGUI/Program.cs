@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Windows.Forms;
+using Widemeadows.MachineLearning.Kohonen.Grid;
+using Widemeadows.MachineLearning.Kohonen.Learning;
 using Widemeadows.MachineLearning.Kohonen.Metrics;
-using Widemeadows.MachineLearning.Kohonen.Neighborhood;
-using Widemeadows.MachineLearning.Kohonen.Net;
+using Widemeadows.MachineLearning.Kohonen.Neuron;
 using Widemeadows.MachineLearning.Kohonen.Random;
 
 namespace Widemeadows.MachineLearning.Kohonen.Tests.RgbMesh

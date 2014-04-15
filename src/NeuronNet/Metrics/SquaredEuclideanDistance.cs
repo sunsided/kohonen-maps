@@ -2,24 +2,19 @@
 using System.Collections.Generic;
 using System.ComponentModel.Composition;
 using Widemeadows.MachineLearning.Kohonen.Model;
-using Widemeadows.MachineLearning.Kohonen.Model.Learning;
+using Widemeadows.MachineLearning.Kohonen.Model.Metrics;
 using Widemeadows.MachineLearning.Kohonen.Model.Neuron;
 
 namespace Widemeadows.MachineLearning.Kohonen.Metrics
 {
     /// <summary>
-    /// Class EuclideanDistance.
+    /// Class SquaredEuclideanDistance.
     /// </summary>
     [Export(typeof(IMetric))]
     [PartCreationPolicy(CreationPolicy.Shared)]
-    [IdMetadata("6C46F6A3-CE3B-4CA1-993C-6DFE321392EE", "Euclidean Distance", "1.0.0.0")]
-    public sealed class EuclideanDistance : IMetric
+    [IdMetadata("E4923798-678D-48DD-81E1-1C5D01DD7B79", "Squared Euclidean Distance", "1.0.0.0")]
+    public sealed class SquaredEuclideanDistance : IMetric
     {
-        /// <summary>
-        /// The squared euclidean distance
-        /// </summary>
-        private readonly SquaredEuclideanDistance _squaredEuclidean = new SquaredEuclideanDistance();
-
         /// <summary>
         /// Calculates the distance between two weight vectors.
         /// </summary>
@@ -45,10 +40,18 @@ namespace Widemeadows.MachineLearning.Kohonen.Metrics
         public double CalculateDistance(IReadOnlyList<double> a, IReadOnlyList<double> b)
         {
             var length = a.Count;
-            if (length != b.Count) throw new ArgumentException("Lengths of input vectors differ.");
+            if (length != b.Count) throw new ArgumentException("Lengths of weight vectors differ.");
 
-            // since this is regular euclidean, draw the square root
-            return Math.Sqrt(_squaredEuclidean.CalculateDistance(a, b));
+            // calculate sum of squared differences
+            double distance = 0;
+            for (int i = 0; i < length; ++i)
+            {
+                var difference = a[i] - b[i];
+                distance += difference * difference;
+            }
+
+            // since this is squared euclidean, no square root is taken
+            return distance;
         }
     }
 }

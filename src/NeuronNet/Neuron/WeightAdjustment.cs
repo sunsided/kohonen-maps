@@ -1,7 +1,7 @@
 ﻿using Widemeadows.MachineLearning.Kohonen.Model.Learning;
 using Widemeadows.MachineLearning.Kohonen.Model.Neuron;
 
-namespace Widemeadows.MachineLearning.Kohonen.Net
+namespace Widemeadows.MachineLearning.Kohonen.Neuron
 {
     /// <summary>
     /// Class WeightAdjustment. This class cannot be inherited.

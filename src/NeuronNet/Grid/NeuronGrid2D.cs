@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using Widemeadows.MachineLearning.Kohonen.Model.Grid;
 using Widemeadows.MachineLearning.Kohonen.Model.Neuron;
 
-namespace Widemeadows.MachineLearning.Kohonen.Net
+namespace Widemeadows.MachineLearning.Kohonen.Grid
 {
     /// <summary>
     /// Class NeuronGrid2D.
