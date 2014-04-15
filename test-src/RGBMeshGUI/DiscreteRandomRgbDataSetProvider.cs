@@ -57,7 +57,10 @@ namespace Widemeadows.MachineLearning.Kohonen.Tests.RgbMesh
                                       Color.White,
                                       Color.Crimson,
                                       Color.Salmon,
-                                      Color.DarkBlue
+                                      Color.DarkBlue,
+                                      Color.Black,
+                                      Color.Olive,
+                                      Color.Red
                                   };
             }
         }
