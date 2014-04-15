@@ -1,4 +1,6 @@
-﻿namespace Widemeadows.MachineLearning.Kohonen.Model.Neuron
+﻿using Widemeadows.MachineLearning.Kohonen.Model.Random;
+
+namespace Widemeadows.MachineLearning.Kohonen.Model.Neuron
 {
     /// <summary>
     /// Interface IRandomNeuronFactory

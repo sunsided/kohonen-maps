@@ -33,7 +33,7 @@ namespace Widemeadows.MachineLearning.Kohonen.Tests.RgbMesh
 
             // prepare generator and randomized data set
             var generator = new StandardRng();
-            var dataSetProvider = new DiscreteRandomRgbDataSetProvider(generator, 100);
+            var dataSetProvider = new DiscreteRandomRgbDataSetProvider(generator, 10);
             var dataSet = dataSetProvider.ProvideDataSet();
 
             // prepare factories

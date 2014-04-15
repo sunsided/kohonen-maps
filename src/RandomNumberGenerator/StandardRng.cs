@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel.Composition;
 using System.Threading;
 using Widemeadows.MachineLearning.Kohonen.Model;
+using Widemeadows.MachineLearning.Kohonen.Model.Random;
 
 namespace Widemeadows.MachineLearning.Kohonen.Random
 {

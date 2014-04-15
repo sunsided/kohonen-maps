@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Widemeadows.MachineLearning.Kohonen.Model.Random;
 
 namespace Widemeadows.MachineLearning.Kohonen.Model.Data
 {

@@ -2,18 +2,19 @@
 using System.Drawing;
 using Widemeadows.MachineLearning.Kohonen.Model;
 using Widemeadows.MachineLearning.Kohonen.Model.Data;
+using Widemeadows.MachineLearning.Kohonen.Model.Random;
 
 namespace Widemeadows.MachineLearning.Kohonen.Tests.RgbMesh
 {
     /// <summary>
     /// Class DiscreteRandomRgbDataSetProvider.
     /// </summary>
-    class DiscreteRandomRgbDataSetProvider : IDataSetProvider
+    class DiscreteRandomRgbDataSetProvider : IDataSetProvider, IRequiresRng
     {
          /// <summary>
         /// The generator
         /// </summary>
-        private readonly IRandomNumber _generator;
+        private IRandomNumber _generator;
 
         /// <summary>
         /// The size
@@ -28,12 +29,18 @@ namespace Widemeadows.MachineLearning.Kohonen.Tests.RgbMesh
         /// <summary>
         /// Initializes a new instance of the <see cref="RgbDataSet" /> class.
         /// </summary>
-        /// <param name="generator">The generator.</param>
+        public DiscreteRandomRgbDataSetProvider()
+            : this(5, null)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="RgbDataSet" /> class.
+        /// </summary>
         /// <param name="size">The size of the data set.</param>
         /// <param name="discreteColors">The discrete colors.</param>
-        public DiscreteRandomRgbDataSetProvider(IRandomNumber generator, int size, params Color[] discreteColors)
+        public DiscreteRandomRgbDataSetProvider(int size, params Color[] discreteColors)
         {
-            _generator = generator;
             _size = size;
             _discreteColors = discreteColors;
 
@@ -48,6 +55,18 @@ namespace Widemeadows.MachineLearning.Kohonen.Tests.RgbMesh
                                       Color.DeepSkyBlue
                                   };
             }
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="RgbDataSet" /> class.
+        /// </summary>
+        /// <param name="generator">The generator.</param>
+        /// <param name="size">The size of the data set.</param>
+        /// <param name="discreteColors">The discrete colors.</param>
+        public DiscreteRandomRgbDataSetProvider(IRandomNumber generator, int size, params Color[] discreteColors)
+            : this(size, discreteColors)
+        {
+            SetRandomNumberGenerator(generator);
         }
         
         /// <summary>
@@ -76,6 +95,15 @@ namespace Widemeadows.MachineLearning.Kohonen.Tests.RgbMesh
             }
 
             return new RgbDataSet(colors);
+        }
+
+        /// <summary>
+        /// Sets the random number generator.
+        /// </summary>
+        /// <param name="generator">The generator.</param>
+        public void SetRandomNumberGenerator(IRandomNumber generator)
+        {
+            _generator = generator;
         }
     }
 }

@@ -51,7 +51,8 @@
     <Compile Include="Neuron\INeuron.cs" />
     <Compile Include="Learning\IRadiusFunction.cs" />
     <Compile Include="Neuron\IRandomNeuronFactory.cs" />
-    <Compile Include="IRandomNumber.cs" />
+    <Compile Include="Random\IRequiresRng.cs" />
+    <Compile Include="Random\IRandomNumber.cs" />
     <Compile Include="IdMetadataAttribute.cs" />
     <Compile Include="Neuron\IWeightAdjustment.cs" />
     <Compile Include="Neuron\IWeights.cs" />

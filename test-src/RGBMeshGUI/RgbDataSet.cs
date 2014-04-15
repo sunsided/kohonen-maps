@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Linq;
 using Widemeadows.MachineLearning.Kohonen.Model;
 using Widemeadows.MachineLearning.Kohonen.Model.Data;
+using Widemeadows.MachineLearning.Kohonen.Model.Random;
 
 namespace Widemeadows.MachineLearning.Kohonen.Tests.RgbMesh
 {

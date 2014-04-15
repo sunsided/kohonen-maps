@@ -1,33 +1,50 @@
 ﻿using System.Drawing;
-using Widemeadows.MachineLearning.Kohonen.Model;
 using Widemeadows.MachineLearning.Kohonen.Model.Data;
+using Widemeadows.MachineLearning.Kohonen.Model.Random;
 
 namespace Widemeadows.MachineLearning.Kohonen.Tests.RgbMesh
 {
     /// <summary>
     /// Class RandomRgbDataSetProvider.
     /// </summary>
-    class RandomRgbDataSetProvider : IDataSetProvider
+    class RandomRgbDataSetProvider : IDataSetProvider, IRequiresRng
     {
         /// <summary>
         /// The generator
         /// </summary>
-        private readonly IRandomNumber _generator;
+        private IRandomNumber _generator;
 
         /// <summary>
         /// The size
         /// </summary>
         private readonly int _size;
-        
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="RgbDataSet" /> class.
+        /// </summary>
+        public RandomRgbDataSetProvider()
+            : this(5)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="RgbDataSet" /> class.
+        /// </summary>
+        /// <param name="size">The size of the data set.</param>
+        public RandomRgbDataSetProvider(int size)
+        {
+            _size = size;
+        }
+
         /// <summary>
         /// Initializes a new instance of the <see cref="RgbDataSet" /> class.
         /// </summary>
         /// <param name="generator">The generator.</param>
         /// <param name="size">The size of the data set.</param>
         public RandomRgbDataSetProvider(IRandomNumber generator, int size)
+            : this(size)
         {
-            _generator = generator;
-            _size = size;
+            SetRandomNumberGenerator(generator);
         }
 
         /// <summary>
@@ -54,6 +71,15 @@ namespace Widemeadows.MachineLearning.Kohonen.Tests.RgbMesh
                 colors[i] = Color.FromArgb(r, g, b);
             }
             return new RgbDataSet(colors);
+        }
+
+        /// <summary>
+        /// Sets the random number generator.
+        /// </summary>
+        /// <param name="generator">The generator.</param>
+        public void SetRandomNumberGenerator(IRandomNumber generator)
+        {
+            _generator = generator;
         }
     }
 }
