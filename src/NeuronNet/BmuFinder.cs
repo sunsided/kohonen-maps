@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using widemeadows.ml.kohonen.model;
-using widemeadows.ml.kohonen.model.data;
+using Widemeadows.MachineLearning.Kohonen.Model.Data;
+using Widemeadows.MachineLearning.Kohonen.Model.Grid;
+using Widemeadows.MachineLearning.Kohonen.Model.Learning;
+using Widemeadows.MachineLearning.Kohonen.Model.Neuron;
 
-namespace widemeadows.ml.kohonen.net
+namespace Widemeadows.MachineLearning.Kohonen.Net
 {
     /// <summary>
     /// Class BmuFinder.

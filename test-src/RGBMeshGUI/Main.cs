@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
-using widemeadows.ml.kohonen.model;
+using Widemeadows.MachineLearning.Kohonen.Model.Grid;
 
-namespace widemeadows.ml.kohonen.tests.rgbmesh
+namespace Widemeadows.MachineLearning.Kohonen.Tests.RgbMesh
 {
     public partial class Main : Form
     {

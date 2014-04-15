@@ -1,22 +1,21 @@
-﻿using System;
-using System.ComponentModel.Composition;
+﻿using System.ComponentModel.Composition;
 using System.Threading;
-using widemeadows.ml.kohonen.model;
+using Widemeadows.MachineLearning.Kohonen.Model;
 
-namespace RandomNumberGenerator
+namespace Widemeadows.MachineLearning.Kohonen.Random
 {
     /// <summary>
     /// Class StandardRng. This class cannot be inherited.
     /// </summary>
     [Export(typeof(IRandomNumber))]
     [PartCreationPolicy(CreationPolicy.NonShared)]
-    [IdMetadataAttribute("36F57512-A94B-4ACE-9B77-63B8ACF30821", "Default RNG", "1.0.0.0")]
+    [IdMetadata("36F57512-A94B-4ACE-9B77-63B8ACF30821", "Default RNG", "1.0.0.0")]
     public sealed class StandardRng : IRandomNumber
     {
         /// <summary>
         /// The random number generator instance
         /// </summary>
-        private Random _random = new Random();
+        private System.Random _random = new System.Random();
 
         /// <summary>
         /// Sets the seed for the generator.
@@ -27,7 +26,7 @@ namespace RandomNumberGenerator
             unchecked
             {
                 var intSeed = (int) seed;
-                var newRandom = new Random(intSeed);
+                var newRandom = new System.Random(intSeed);
                 Interlocked.Exchange(ref _random, newRandom);
             }
         }

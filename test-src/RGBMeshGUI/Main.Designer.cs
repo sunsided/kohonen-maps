@@ -1,4 +1,4 @@
-﻿namespace widemeadows.ml.kohonen.tests.rgbmesh
+﻿namespace Widemeadows.MachineLearning.Kohonen.Tests.RgbMesh
 {
     partial class Main
     {

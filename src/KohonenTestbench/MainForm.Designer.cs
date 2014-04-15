@@ -1,4 +1,4 @@
-﻿namespace KohonenTestbench
+﻿namespace Widemeadows.MachineLearning.Kohonen.Testbench
 {
     partial class MainForm
     {

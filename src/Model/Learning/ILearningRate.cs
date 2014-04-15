@@ -1,4 +1,4 @@
-﻿namespace widemeadows.ml.kohonen.model
+﻿namespace Widemeadows.MachineLearning.Kohonen.Model.Learning
 {
     /// <summary>
     /// Interface ILearningRate

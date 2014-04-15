@@ -7,7 +7,7 @@
     <ProjectGuid>{7551C286-707C-4E5B-A0F0-C0712D878393}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>widemeadows.ml.kohonen.tests.rgbmesh</RootNamespace>
+    <RootNamespace>Widemeadows.MachineLearning.Kohonen.Tests.RgbMesh</RootNamespace>
     <AssemblyName>RGBMeshGUI</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -34,14 +34,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ColorDatum.cs" />

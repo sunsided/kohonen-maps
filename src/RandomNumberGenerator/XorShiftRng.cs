@@ -1,16 +1,16 @@
 ﻿using System;
 using System.ComponentModel.Composition;
 using System.Threading;
-using widemeadows.ml.kohonen.model;
+using Widemeadows.MachineLearning.Kohonen.Model;
 
-namespace RandomNumberGenerator
+namespace Widemeadows.MachineLearning.Kohonen.Random
 {
     /// <summary>
     /// Class XorShiftRng. This class cannot be inherited.
     /// </summary>
     [Export(typeof(IRandomNumber))]
     [PartCreationPolicy(CreationPolicy.NonShared)]
-    [IdMetadataAttribute("BE09E456-5815-4821-97FD-3E5652D002C2", "XorShift RNG", "1.0.0.0")]
+    [IdMetadata("BE09E456-5815-4821-97FD-3E5652D002C2", "XorShift RNG", "1.0.0.0")]
     public sealed class XorShiftRng : IRandomNumber
     {
         /// <summary>

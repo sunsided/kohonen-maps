@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace widemeadows.ml.kohonen.model.data
+namespace Widemeadows.MachineLearning.Kohonen.Model.Data
 {
     /// <summary>
     /// Interface IDataSet

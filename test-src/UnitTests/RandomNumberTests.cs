@@ -1,9 +1,9 @@
 ﻿using System;
 using FluentAssertions;
 using NUnit.Framework;
-using RandomNumberGenerator;
+using Widemeadows.MachineLearning.Kohonen.Random;
 
-namespace widemeadows.ml.kohonen.tests
+namespace Widemeadows.MachineLearning.Kohonen.Tests
 {
     [TestFixture]
     public sealed class RandomNumberTests

@@ -7,7 +7,7 @@
     <ProjectGuid>{75C4A7F7-93B2-4474-9049-5B796327DA48}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>widemeadows.ml.kohonen.net</RootNamespace>
+    <RootNamespace>Widemeadows.MachineLearning.Kohonen.Net</RootNamespace>
     <AssemblyName>NeuronNet</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -32,11 +32,6 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GridNeuron.cs" />

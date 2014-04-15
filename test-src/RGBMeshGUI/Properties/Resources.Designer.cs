@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace widemeadows.ml.kohonen.tests.rgbmesh.Properties {
+namespace Widemeadows.MachineLearning.Kohonen.Tests.RgbMesh.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace widemeadows.ml.kohonen.tests.rgbmesh.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("widemeadows.ml.kohonen.tests.rgbmesh.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Widemeadows.MachineLearning.Kohonen.Tests.RgbMesh.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

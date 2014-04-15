@@ -1,4 +1,4 @@
-﻿namespace widemeadows.ml.kohonen.model
+﻿namespace Widemeadows.MachineLearning.Kohonen.Model.Neuron
 {
     /// <summary>
     /// Interface IRandomNeuronFactory

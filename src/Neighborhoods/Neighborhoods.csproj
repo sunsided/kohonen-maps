@@ -7,7 +7,7 @@
     <ProjectGuid>{03C23207-E32C-4C68-9B6D-B9D1E1A50233}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>widemeadows.ml.kohonen.neighborhoods</RootNamespace>
+    <RootNamespace>Widemeadows.MachineLearning.Kohonen.Neighborhood</RootNamespace>
     <AssemblyName>Neighborhoods</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -33,11 +33,6 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MexicanHatNeighborhood.cs" />

@@ -7,7 +7,7 @@
     <ProjectGuid>{6C8E4033-007D-43CA-96BB-80BD88249911}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>RandomNumberGenerator</RootNamespace>
+    <RootNamespace>Widemeadows.MachineLearning.Kohonen.Random</RootNamespace>
     <AssemblyName>RandomNumberGenerator</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -33,11 +33,6 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="XorShiftRng.cs" />

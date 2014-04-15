@@ -1,18 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.ComponentModel.Composition;
 using System.ComponentModel.Composition.Hosting;
-using System.Data;
 using System.Diagnostics;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using widemeadows.ml.kohonen.model;
+using Widemeadows.MachineLearning.Kohonen.Model;
 
-namespace KohonenTestbench
+namespace Widemeadows.MachineLearning.Kohonen.Testbench
 {
     public partial class MainForm : Form
     {

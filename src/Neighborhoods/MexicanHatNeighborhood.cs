@@ -1,15 +1,16 @@
 ﻿using System;
 using System.ComponentModel.Composition;
-using widemeadows.ml.kohonen.model;
+using Widemeadows.MachineLearning.Kohonen.Model;
+using Widemeadows.MachineLearning.Kohonen.Model.Learning;
 
-namespace widemeadows.ml.kohonen.neighborhoods
+namespace Widemeadows.MachineLearning.Kohonen.Neighborhood
 {
     /// <summary>
     /// Class MexicanHatNeighborhood. This class cannot be inherited.
     /// </summary>
     [Export(typeof(INeighborhoodFunction))]
     [PartCreationPolicy(CreationPolicy.Shared)]
-    [IdMetadataAttribute("6628DFF4-240A-437B-8641-4EEF03242BC3", "Mexican Hat", "1.0.0.0")]
+    [IdMetadata("6628DFF4-240A-437B-8641-4EEF03242BC3", "Mexican Hat", "1.0.0.0")]
     public sealed class MexicanHatNeighborhood : INeighborhoodFunction
     {
         /// <summary>

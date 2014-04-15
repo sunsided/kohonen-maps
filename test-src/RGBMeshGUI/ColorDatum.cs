@@ -1,10 +1,10 @@
 ﻿using System.Diagnostics;
 using System.Drawing;
-using widemeadows.ml.kohonen.model;
-using widemeadows.ml.kohonen.model.data;
-using widemeadows.ml.kohonen.net;
+using Widemeadows.MachineLearning.Kohonen.Model.Data;
+using Widemeadows.MachineLearning.Kohonen.Model.Neuron;
+using Widemeadows.MachineLearning.Kohonen.Net;
 
-namespace widemeadows.ml.kohonen.tests.rgbmesh
+namespace Widemeadows.MachineLearning.Kohonen.Tests.RgbMesh
 {
     /// <summary>
     /// Class ColorDatum. This class cannot be inherited.

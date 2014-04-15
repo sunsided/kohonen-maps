@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using System.ComponentModel.Composition;
 using System.ComponentModel.Composition.Hosting;
-using widemeadows.ml.kohonen.model;
+using Widemeadows.MachineLearning.Kohonen.Model;
+using Widemeadows.MachineLearning.Kohonen.Model.Learning;
 
-namespace widemeadows.ml.kohonen.tests.interfacescan
+namespace Widemeadows.MachineLearning.Kohonen.Tests.InterfaceScan
 {
     class Program
     {

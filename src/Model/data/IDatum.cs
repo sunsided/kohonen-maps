@@ -1,4 +1,6 @@
-﻿namespace widemeadows.ml.kohonen.model.data
+﻿using Widemeadows.MachineLearning.Kohonen.Model.Neuron;
+
+namespace Widemeadows.MachineLearning.Kohonen.Model.Data
 {
     /// <summary>
     /// Interface IDatum

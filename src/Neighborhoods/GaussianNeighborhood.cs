@@ -1,15 +1,16 @@
 ﻿using System;
 using System.ComponentModel.Composition;
-using widemeadows.ml.kohonen.model;
+using Widemeadows.MachineLearning.Kohonen.Model;
+using Widemeadows.MachineLearning.Kohonen.Model.Learning;
 
-namespace widemeadows.ml.kohonen.neighborhoods
+namespace Widemeadows.MachineLearning.Kohonen.Neighborhood
 {
     /// <summary>
     /// Class GaussianNeighborhood. This class cannot be inherited.
     /// </summary>
     [Export(typeof(INeighborhoodFunction))]
     [PartCreationPolicy(CreationPolicy.Shared)]
-    [IdMetadataAttribute("2114FB74-91EF-47AB-AC8D-AEE5A076746B", "Gaussian", "1.0.0.0")]
+    [IdMetadata("2114FB74-91EF-47AB-AC8D-AEE5A076746B", "Gaussian", "1.0.0.0")]
     public sealed class GaussianNeighborhood : INeighborhoodFunction
     {
         /// <summary>

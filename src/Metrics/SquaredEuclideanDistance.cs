@@ -1,16 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.Composition;
-using widemeadows.ml.kohonen.model;
+using Widemeadows.MachineLearning.Kohonen.Model;
+using Widemeadows.MachineLearning.Kohonen.Model.Learning;
+using Widemeadows.MachineLearning.Kohonen.Model.Neuron;
 
-namespace widemeadows.ml.kohonen.metrics
+namespace Widemeadows.MachineLearning.Kohonen.Metrics
 {
     /// <summary>
     /// Class SquaredEuclideanDistance.
     /// </summary>
     [Export(typeof(IMetric))]
     [PartCreationPolicy(CreationPolicy.Shared)]
-    [IdMetadataAttribute("E4923798-678D-48DD-81E1-1C5D01DD7B79", "Squared Euclidean Distance", "1.0.0.0")]
+    [IdMetadata("E4923798-678D-48DD-81E1-1C5D01DD7B79", "Squared Euclidean Distance", "1.0.0.0")]
     public sealed class SquaredEuclideanDistance : IMetric
     {
         /// <summary>

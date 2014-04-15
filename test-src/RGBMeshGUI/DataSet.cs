@@ -2,7 +2,7 @@
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace widemeadows.ml.kohonen.tests.rgbmesh
+namespace Widemeadows.MachineLearning.Kohonen.Tests.RgbMesh
 {
     /// <summary>
     /// Class DataSet.

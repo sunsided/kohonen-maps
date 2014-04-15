@@ -1,4 +1,6 @@
-namespace widemeadows.ml.kohonen.model
+using Widemeadows.MachineLearning.Kohonen.Model.Neuron;
+
+namespace Widemeadows.MachineLearning.Kohonen.Model.Grid
 {
     /// <summary>
     /// Interface IGrid2D

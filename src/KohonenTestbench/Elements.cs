@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.Composition;
-using widemeadows.ml.kohonen.model;
+using Widemeadows.MachineLearning.Kohonen.Model;
+using Widemeadows.MachineLearning.Kohonen.Model.Learning;
 
-namespace KohonenTestbench
+namespace Widemeadows.MachineLearning.Kohonen.Testbench
 {
     /// <summary>
     /// Class Elements. This class cannot be inherited.

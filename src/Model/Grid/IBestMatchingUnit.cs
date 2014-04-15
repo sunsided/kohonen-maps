@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using Widemeadows.MachineLearning.Kohonen.Model.Neuron;
 
-namespace widemeadows.ml.kohonen.model
+namespace Widemeadows.MachineLearning.Kohonen.Model.Grid
 {
     /// <summary>
     /// Interface IBestMatchingUnit

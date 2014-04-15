@@ -1,16 +1,17 @@
 ﻿using System;
 using System.ComponentModel;
 using System.ComponentModel.Composition;
-using widemeadows.ml.kohonen.model;
+using Widemeadows.MachineLearning.Kohonen.Model;
+using Widemeadows.MachineLearning.Kohonen.Model.Learning;
 
-namespace widemeadows.ml.kohonen.neighborhoods
+namespace Widemeadows.MachineLearning.Kohonen.Neighborhood
 {
     /// <summary>
     /// Class ExponentialShrink.
     /// </summary>
     [Export(typeof(ILearningRate))]
     [PartCreationPolicy(CreationPolicy.NonShared)]
-    [IdMetadataAttribute("E2043121-F0B0-4029-93E0-02B066E0B572", "Exponential Decay", "1.0.0.0")]
+    [IdMetadata("E2043121-F0B0-4029-93E0-02B066E0B572", "Exponential Decay", "1.0.0.0")]
     public sealed class LearningRateExponentialShrink : ILearningRate
     {
         /// <summary>

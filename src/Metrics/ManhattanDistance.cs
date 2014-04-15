@@ -1,16 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.Composition;
-using widemeadows.ml.kohonen.model;
+using Widemeadows.MachineLearning.Kohonen.Model;
+using Widemeadows.MachineLearning.Kohonen.Model.Learning;
+using Widemeadows.MachineLearning.Kohonen.Model.Neuron;
 
-namespace widemeadows.ml.kohonen.metrics
+namespace Widemeadows.MachineLearning.Kohonen.Metrics
 {
     /// <summary>
     /// Class ManhattanDistance.
     /// </summary>
     [Export(typeof(IMetric))]
     [PartCreationPolicy(CreationPolicy.Shared)]
-    [IdMetadataAttribute("642CC4FF-755B-4C90-B92C-7A40C16CE110", "Manhattan Distance", "1.0.0.0")]
+    [IdMetadata("642CC4FF-755B-4C90-B92C-7A40C16CE110", "Manhattan Distance", "1.0.0.0")]
     public sealed class ManhattanDistance : IMetric
     {
         /// <summary>

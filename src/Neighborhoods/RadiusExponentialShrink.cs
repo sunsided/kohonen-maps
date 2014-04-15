@@ -1,15 +1,16 @@
 ﻿using System;
 using System.ComponentModel.Composition;
-using widemeadows.ml.kohonen.model;
+using Widemeadows.MachineLearning.Kohonen.Model;
+using Widemeadows.MachineLearning.Kohonen.Model.Learning;
 
-namespace widemeadows.ml.kohonen.neighborhoods
+namespace Widemeadows.MachineLearning.Kohonen.Neighborhood
 {
     /// <summary>
     /// Class ExponentialShrink.
     /// </summary>
     [Export(typeof(IRadiusFunction))]
     [PartCreationPolicy(CreationPolicy.NonShared)]
-    [IdMetadataAttribute("075CC788-B067-4BEA-88E0-7E89EEC693EE", "Exponential Decay", "1.0.0.0")]
+    [IdMetadata("075CC788-B067-4BEA-88E0-7E89EEC693EE", "Exponential Decay", "1.0.0.0")]
     public sealed class RadiusExponentialShrink : IRadiusFunction
     {
         /// <summary>

@@ -7,7 +7,7 @@
     <ProjectGuid>{31069D8C-1779-460E-AA06-5CD126AEDE9F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>widemeadows.ml.kohonen.model</RootNamespace>
+    <RootNamespace>Widemeadows.MachineLearning.Kohonen.Model</RootNamespace>
     <AssemblyName>Model</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -33,35 +33,31 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="data\IDataSetProvider.cs" />
-    <Compile Include="IBestMatchingUnit.cs" />
-    <Compile Include="IGridNeuron.cs" />
-    <Compile Include="IBmuFinder.cs" />
-    <Compile Include="data\IDataSet.cs" />
-    <Compile Include="data\IDatum.cs" />
-    <Compile Include="IGrid.cs" />
-    <Compile Include="IGrid2D.cs" />
-    <Compile Include="IIterationDependent.cs" />
-    <Compile Include="ILearningRate.cs" />
+    <Compile Include="Data\IDataSetProvider.cs" />
+    <Compile Include="Grid\IBestMatchingUnit.cs" />
+    <Compile Include="Neuron\IGridNeuron.cs" />
+    <Compile Include="Grid\IBmuFinder.cs" />
+    <Compile Include="Data\IDataSet.cs" />
+    <Compile Include="Data\IDatum.cs" />
+    <Compile Include="Grid\IGrid.cs" />
+    <Compile Include="Grid\IGrid2D.cs" />
+    <Compile Include="Learning\IIterationDependent.cs" />
+    <Compile Include="Learning\ILearningRate.cs" />
     <Compile Include="IMetadata.cs" />
-    <Compile Include="IMetric.cs" />
-    <Compile Include="INeighborhoodFunction.cs" />
-    <Compile Include="INeuron.cs" />
-    <Compile Include="IRadiusFunction.cs" />
-    <Compile Include="IRandomNeuronFactory.cs" />
+    <Compile Include="Learning\IMetric.cs" />
+    <Compile Include="Learning\INeighborhoodFunction.cs" />
+    <Compile Include="Neuron\INeuron.cs" />
+    <Compile Include="Learning\IRadiusFunction.cs" />
+    <Compile Include="Neuron\IRandomNeuronFactory.cs" />
     <Compile Include="IRandomNumber.cs" />
     <Compile Include="IdMetadataAttribute.cs" />
-    <Compile Include="IWeightAdjustment.cs" />
-    <Compile Include="IWeights.cs" />
+    <Compile Include="Neuron\IWeightAdjustment.cs" />
+    <Compile Include="Neuron\IWeights.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
