@@ -18,19 +18,19 @@ namespace Widemeadows.MachineLearning.Kohonen.Tests.InterfaceScan
         }
 
         [ImportMany(typeof(IRandomNumber))]
-        private IEnumerable<Lazy<IRandomNumber, IMetadata>> _randomNumberGenerators = null;
+        private IEnumerable<Lazy<IRandomNumber, IExtendedMetadata>> _randomNumberGenerators = null;
 
         [ImportMany(typeof(IMetric))]
-        private IEnumerable<Lazy<IMetric, IMetadata>> _metrics = null;
+        private IEnumerable<Lazy<IMetric, IExtendedMetadata>> _metrics = null;
 
         [ImportMany(typeof(INeighborhoodFunction))]
-        private IEnumerable<Lazy<INeighborhoodFunction, IMetadata>> _neighborhoodFunctions = null;
+        private IEnumerable<Lazy<INeighborhoodFunction, IExtendedMetadata>> _neighborhoodFunctions = null;
 
         [ImportMany(typeof(IRadiusFunction))]
-        private IEnumerable<Lazy<IRadiusFunction, IMetadata>> _radiusFunctions = null;
+        private IEnumerable<Lazy<IRadiusFunction, IExtendedMetadata>> _radiusFunctions = null;
 
         [ImportMany(typeof(ILearningRate))]
-        private IEnumerable<Lazy<ILearningRate, IMetadata>> _learningRateFunctions = null;
+        private IEnumerable<Lazy<ILearningRate, IExtendedMetadata>> _learningRateFunctions = null;
 
         [Export("TotalIterations")]
         private int _totalIterations = 100;
@@ -65,7 +65,7 @@ namespace Widemeadows.MachineLearning.Kohonen.Tests.InterfaceScan
         /// </summary>
         /// <param name="header">The header.</param>
         /// <param name="constructed">The constructed.</param>
-        private void List<T>(string header, IEnumerable<Lazy<T, IMetadata>> constructed)
+        private void List<T>(string header, IEnumerable<Lazy<T, IExtendedMetadata>> constructed)
         {
             Console.WriteLine(header);
 
@@ -74,8 +74,10 @@ namespace Widemeadows.MachineLearning.Kohonen.Tests.InterfaceScan
                 var name = contract.Metadata.Name;
                 var version = contract.Metadata.Version;
                 var id = contract.Metadata.Id;
+                var isDefault = contract.Metadata.IsDefault;
 
-                Console.WriteLine(" - {0}, Version {1}", name, version);
+                Console.Write(isDefault ? " * " : " - ");
+                Console.WriteLine("{0}, Version {1}", name, version);
             }
             
             Console.WriteLine();

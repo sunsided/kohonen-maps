@@ -37,6 +37,8 @@
   <ItemGroup>
     <Compile Include="Grid\GridNeuron.cs" />
     <Compile Include="Grid\BmuFinder.cs" />
+    <Compile Include="Model\IExtendedMetadata.cs" />
+    <Compile Include="Model\InternalIdMetadataAttribute.cs" />
     <Compile Include="Metrics\EuclideanDistance.cs" />
     <Compile Include="Learning\GaussianNeighborhood.cs" />
     <Compile Include="Learning\LearningRateExponentialShrink.cs" />

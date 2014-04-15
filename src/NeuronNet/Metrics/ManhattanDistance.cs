@@ -12,7 +12,7 @@ namespace Widemeadows.MachineLearning.Kohonen.Metrics
     /// </summary>
     [Export(typeof(IMetric))]
     [PartCreationPolicy(CreationPolicy.Shared)]
-    [IdMetadata("642CC4FF-755B-4C90-B92C-7A40C16CE110", "Manhattan Distance", "1.0.0.0")]
+    [InternalIdMetadata("642CC4FF-755B-4C90-B92C-7A40C16CE110", "Manhattan Distance", "1.0.0.0")]
     public sealed class ManhattanDistance : IMetric
     {
         /// <summary>

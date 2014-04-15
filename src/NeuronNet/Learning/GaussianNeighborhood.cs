@@ -10,7 +10,7 @@ namespace Widemeadows.MachineLearning.Kohonen.Learning
     /// </summary>
     [Export(typeof(INeighborhoodFunction))]
     [PartCreationPolicy(CreationPolicy.Shared)]
-    [IdMetadata("2114FB74-91EF-47AB-AC8D-AEE5A076746B", "Gaussian", "1.0.0.0")]
+    [InternalIdMetadata("2114FB74-91EF-47AB-AC8D-AEE5A076746B", "Gaussian", "1.0.0.0", IsDefault = true)]
     public sealed class GaussianNeighborhood : INeighborhoodFunction
     {
         /// <summary>

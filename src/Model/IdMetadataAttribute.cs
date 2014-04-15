@@ -7,7 +7,7 @@ namespace Widemeadows.MachineLearning.Kohonen.Model
     /// Class IdMetadataAttribute. This class cannot be inherited.
     /// </summary>
     [MetadataAttribute]
-    public sealed class IdMetadataAttribute : Attribute, IMetadata
+    public class IdMetadataAttribute : Attribute, IMetadata
     {
         /// <summary>
         /// Gets the name.

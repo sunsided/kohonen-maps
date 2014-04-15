@@ -10,7 +10,7 @@ namespace Widemeadows.MachineLearning.Kohonen.Learning
     /// </summary>
     [Export(typeof(IRadiusFunction))]
     [PartCreationPolicy(CreationPolicy.NonShared)]
-    [IdMetadata("075CC788-B067-4BEA-88E0-7E89EEC693EE", "Exponential Decay", "1.0.0.0")]
+    [InternalIdMetadata("075CC788-B067-4BEA-88E0-7E89EEC693EE", "Exponential Decay", "1.0.0.0", IsDefault = true)]
     public sealed class RadiusExponentialShrink : IRadiusFunction
     {
         /// <summary>

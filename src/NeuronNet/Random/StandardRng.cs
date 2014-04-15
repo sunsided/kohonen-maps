@@ -10,7 +10,7 @@ namespace Widemeadows.MachineLearning.Kohonen.Random
     /// </summary>
     [Export(typeof(IRandomNumber))]
     [PartCreationPolicy(CreationPolicy.NonShared)]
-    [IdMetadata("36F57512-A94B-4ACE-9B77-63B8ACF30821", "Default RNG", "1.0.0.0")]
+    [InternalIdMetadata("36F57512-A94B-4ACE-9B77-63B8ACF30821", "Default RNG", "1.0.0.0", IsDefault = true)]
     public sealed class StandardRng : IRandomNumber
     {
         /// <summary>

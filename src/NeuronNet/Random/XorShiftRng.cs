@@ -11,7 +11,7 @@ namespace Widemeadows.MachineLearning.Kohonen.Random
     /// </summary>
     [Export(typeof(IRandomNumber))]
     [PartCreationPolicy(CreationPolicy.NonShared)]
-    [IdMetadata("BE09E456-5815-4821-97FD-3E5652D002C2", "XorShift RNG", "1.0.0.0")]
+    [InternalIdMetadata("BE09E456-5815-4821-97FD-3E5652D002C2", "XorShift RNG", "1.0.0.0")]
     public sealed class XorShiftRng : IRandomNumber
     {
         /// <summary>

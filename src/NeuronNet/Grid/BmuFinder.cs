@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using Widemeadows.MachineLearning.Kohonen.Model.Data;
 using Widemeadows.MachineLearning.Kohonen.Model.Grid;
-using Widemeadows.MachineLearning.Kohonen.Model.Learning;
 using Widemeadows.MachineLearning.Kohonen.Model.Metrics;
 using Widemeadows.MachineLearning.Kohonen.Model.Neuron;
 

@@ -10,7 +10,7 @@ namespace Widemeadows.MachineLearning.Kohonen.Learning
     /// </summary>
     [Export(typeof(INeighborhoodFunction))]
     [PartCreationPolicy(CreationPolicy.Shared)]
-    [IdMetadata("6628DFF4-240A-437B-8641-4EEF03242BC3", "Mexican Hat", "1.0.0.0")]
+    [InternalIdMetadata("6628DFF4-240A-437B-8641-4EEF03242BC3", "Mexican Hat", "1.0.0.0")]
     public sealed class MexicanHatNeighborhood : INeighborhoodFunction
     {
         /// <summary>

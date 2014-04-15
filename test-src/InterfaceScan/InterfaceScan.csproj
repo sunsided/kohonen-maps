@@ -48,6 +48,10 @@
       <Project>{31069D8C-1779-460E-AA06-5CD126AEDE9F}</Project>
       <Name>Model</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\src\NeuronNet\NeuronNet.csproj">
+      <Project>{75C4A7F7-93B2-4474-9049-5B796327DA48}</Project>
+      <Name>NeuronNet</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -11,7 +11,7 @@ namespace Widemeadows.MachineLearning.Kohonen.Learning
     /// </summary>
     [Export(typeof(ILearningRate))]
     [PartCreationPolicy(CreationPolicy.NonShared)]
-    [IdMetadata("E2043121-F0B0-4029-93E0-02B066E0B572", "Exponential Decay", "1.0.0.0")]
+    [InternalIdMetadata("E2043121-F0B0-4029-93E0-02B066E0B572", "Exponential Decay", "1.0.0.0", IsDefault = true)]
     public sealed class LearningRateExponentialShrink : ILearningRate
     {
         /// <summary>

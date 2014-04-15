@@ -12,7 +12,7 @@ namespace Widemeadows.MachineLearning.Kohonen.Metrics
     /// </summary>
     [Export(typeof(IMetric))]
     [PartCreationPolicy(CreationPolicy.Shared)]
-    [IdMetadata("6C46F6A3-CE3B-4CA1-993C-6DFE321392EE", "Euclidean Distance", "1.0.0.0")]
+    [InternalIdMetadata("6C46F6A3-CE3B-4CA1-993C-6DFE321392EE", "Euclidean Distance", "1.0.0.0", IsDefault = true)]
     public sealed class EuclideanDistance : IMetric
     {
         /// <summary>
