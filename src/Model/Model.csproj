@@ -40,11 +40,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="data\IDataSetProvider.cs" />
     <Compile Include="IBestMatchingUnit.cs" />
     <Compile Include="IGridNeuron.cs" />
     <Compile Include="IBmuFinder.cs" />
-    <Compile Include="IDataSet.cs" />
-    <Compile Include="IDatum.cs" />
+    <Compile Include="data\IDataSet.cs" />
+    <Compile Include="data\IDatum.cs" />
     <Compile Include="IGrid.cs" />
     <Compile Include="IGrid2D.cs" />
     <Compile Include="IIterationDependent.cs" />

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using widemeadows.ml.kohonen.model;
+using widemeadows.ml.kohonen.model.data;
 
 namespace widemeadows.ml.kohonen.net
 {

@@ -1,4 +1,6 @@
-﻿namespace widemeadows.ml.kohonen.model
+﻿using widemeadows.ml.kohonen.model.data;
+
+namespace widemeadows.ml.kohonen.model
 {
     /// <summary>
     /// Interface IBmuFinder

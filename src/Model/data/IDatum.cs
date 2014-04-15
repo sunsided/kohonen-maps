@@ -1,4 +1,4 @@
-﻿namespace widemeadows.ml.kohonen.model
+﻿namespace widemeadows.ml.kohonen.model.data
 {
     /// <summary>
     /// Interface IDatum

@@ -1,6 +1,7 @@
 ﻿using System.Diagnostics;
 using System.Drawing;
 using widemeadows.ml.kohonen.model;
+using widemeadows.ml.kohonen.model.data;
 using widemeadows.ml.kohonen.net;
 
 namespace widemeadows.ml.kohonen.tests.rgbmesh
