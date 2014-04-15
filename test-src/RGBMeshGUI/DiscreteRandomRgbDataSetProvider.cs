@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
 using Widemeadows.MachineLearning.Kohonen.Model;
 using Widemeadows.MachineLearning.Kohonen.Model.Data;
@@ -30,7 +31,7 @@ namespace Widemeadows.MachineLearning.Kohonen.Tests.RgbMesh
         /// Initializes a new instance of the <see cref="RgbDataSet" /> class.
         /// </summary>
         public DiscreteRandomRgbDataSetProvider()
-            : this(5, null)
+            : this(4, null)
         {
         }
 
@@ -51,8 +52,12 @@ namespace Widemeadows.MachineLearning.Kohonen.Tests.RgbMesh
                                   {
                                       Color.Magenta,
                                       Color.Lime,
-                                      Color.OrangeRed,
-                                      Color.DeepSkyBlue
+                                      Color.Orange,
+                                      Color.DeepSkyBlue,
+                                      Color.White,
+                                      Color.Crimson,
+                                      Color.Salmon,
+                                      Color.DarkBlue
                                   };
             }
         }
@@ -84,14 +89,15 @@ namespace Widemeadows.MachineLearning.Kohonen.Tests.RgbMesh
         /// <returns>IDataSet.</returns>
         public IRgbDataSet ProvideDataSet()
         {
-            var colors = new Color[_size];
-            var discreteColors = _discreteColors;
-            var discreteColorCount = discreteColors.Length;
+            var discreteColors = new List<Color>(_discreteColors);
+            var size = Math.Min(_size, discreteColors.Count);
+            var colors = new Color[size];
 
-            for (int i = 0; i < _size; ++i)
+            for (int i = 0; i < size; ++i)
             {
-                var index = (int)Math.Round(_generator.GetDouble(0, discreteColorCount - 1));
+                var index = (int)Math.Round(_generator.GetDouble(0, discreteColors.Count - 1));
                 colors[i] = discreteColors[index];
+                discreteColors.RemoveAt(index);
             }
 
             return new RgbDataSet(colors);
