@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.Composition;
 
-namespace Widemeadows.MachineLearning.Kohonen.Model
+namespace Widemeadows.MachineLearning.Kohonen
 {
     /// <summary>
     /// Class IdMetadataAttribute. This class cannot be inherited.

@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using Widemeadows.MachineLearning.Kohonen.Model.Grid;
-using Widemeadows.MachineLearning.Kohonen.Model.Neuron;
+using Widemeadows.MachineLearning.Kohonen.Neuron;
 
 namespace Widemeadows.MachineLearning.Kohonen.Grid
 {

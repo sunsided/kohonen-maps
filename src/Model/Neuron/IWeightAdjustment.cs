@@ -1,4 +1,4 @@
-﻿namespace Widemeadows.MachineLearning.Kohonen.Model.Neuron
+﻿namespace Widemeadows.MachineLearning.Kohonen.Neuron
 {
     /// <summary>
     /// Interface IWeightAdjustment

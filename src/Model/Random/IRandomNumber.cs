@@ -1,4 +1,4 @@
-﻿namespace Widemeadows.MachineLearning.Kohonen.Model.Random
+﻿namespace Widemeadows.MachineLearning.Kohonen.Random
 {
     /// <summary>
     /// Interface IRandomNumber

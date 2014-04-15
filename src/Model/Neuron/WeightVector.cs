@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-namespace Widemeadows.MachineLearning.Kohonen.Model.Neuron
+namespace Widemeadows.MachineLearning.Kohonen.Neuron
 {
     /// <summary>
     /// Class DoubleVector. This class cannot be inherited.

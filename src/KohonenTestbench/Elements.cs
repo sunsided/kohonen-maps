@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.Composition;
+using Widemeadows.MachineLearning.Kohonen.Learning;
+using Widemeadows.MachineLearning.Kohonen.Metrics;
 using Widemeadows.MachineLearning.Kohonen.Model;
-using Widemeadows.MachineLearning.Kohonen.Model.Learning;
-using Widemeadows.MachineLearning.Kohonen.Model.Metrics;
-using Widemeadows.MachineLearning.Kohonen.Model.Random;
+using Widemeadows.MachineLearning.Kohonen.Random;
 
 namespace Widemeadows.MachineLearning.Kohonen.Testbench
 {

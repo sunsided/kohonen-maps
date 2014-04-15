@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using Widemeadows.MachineLearning.Kohonen.Model.Random;
+using Widemeadows.MachineLearning.Kohonen.Random;
 
-namespace Widemeadows.MachineLearning.Kohonen.Model.Data
+namespace Widemeadows.MachineLearning.Kohonen.Data
 {
     /// <summary>
     /// Interface IDataSet

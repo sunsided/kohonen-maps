@@ -1,4 +1,4 @@
-﻿namespace Widemeadows.MachineLearning.Kohonen.Model.Data
+﻿namespace Widemeadows.MachineLearning.Kohonen.Data
 {
     /// <summary>
     /// Interface IDataSetProvider

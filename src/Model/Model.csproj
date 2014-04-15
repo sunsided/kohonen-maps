@@ -7,7 +7,7 @@
     <ProjectGuid>{31069D8C-1779-460E-AA06-5CD126AEDE9F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Widemeadows.MachineLearning.Kohonen.Model</RootNamespace>
+    <RootNamespace>Widemeadows.MachineLearning.Kohonen</RootNamespace>
     <AssemblyName>Model</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

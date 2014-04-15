@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.Composition;
 using Widemeadows.MachineLearning.Kohonen.Model;
-using Widemeadows.MachineLearning.Kohonen.Model.Metrics;
-using Widemeadows.MachineLearning.Kohonen.Model.Neuron;
+using Widemeadows.MachineLearning.Kohonen.Neuron;
 
 namespace Widemeadows.MachineLearning.Kohonen.Metrics
 {

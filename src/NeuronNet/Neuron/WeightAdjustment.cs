@@ -1,5 +1,4 @@
-﻿using Widemeadows.MachineLearning.Kohonen.Model.Learning;
-using Widemeadows.MachineLearning.Kohonen.Model.Neuron;
+﻿using Widemeadows.MachineLearning.Kohonen.Learning;
 
 namespace Widemeadows.MachineLearning.Kohonen.Neuron
 {

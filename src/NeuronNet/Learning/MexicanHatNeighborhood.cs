@@ -1,7 +1,6 @@
 ﻿using System;
 using System.ComponentModel.Composition;
 using Widemeadows.MachineLearning.Kohonen.Model;
-using Widemeadows.MachineLearning.Kohonen.Model.Learning;
 
 namespace Widemeadows.MachineLearning.Kohonen.Learning
 {

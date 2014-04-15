@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using Widemeadows.MachineLearning.Kohonen.Model.Neuron;
+using Widemeadows.MachineLearning.Kohonen.Neuron;
 
-namespace Widemeadows.MachineLearning.Kohonen.Model.Metrics
+namespace Widemeadows.MachineLearning.Kohonen.Metrics
 {
     /// <summary>
     /// Interface IMetric

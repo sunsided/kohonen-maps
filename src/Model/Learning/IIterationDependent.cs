@@ -1,4 +1,4 @@
-﻿namespace Widemeadows.MachineLearning.Kohonen.Model.Learning
+﻿namespace Widemeadows.MachineLearning.Kohonen.Learning
 {
     /// <summary>
     /// Interface IIterationDependent

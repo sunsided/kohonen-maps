@@ -1,6 +1,5 @@
 ﻿using System;
-using Widemeadows.MachineLearning.Kohonen.Model.Neuron;
-using Widemeadows.MachineLearning.Kohonen.Model.Random;
+using Widemeadows.MachineLearning.Kohonen.Random;
 
 namespace Widemeadows.MachineLearning.Kohonen.Neuron
 {

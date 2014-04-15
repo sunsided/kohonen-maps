@@ -1,6 +1,6 @@
-﻿using Widemeadows.MachineLearning.Kohonen.Model.Data;
+﻿using Widemeadows.MachineLearning.Kohonen.Data;
 
-namespace Widemeadows.MachineLearning.Kohonen.Model.Grid
+namespace Widemeadows.MachineLearning.Kohonen.Grid
 {
     /// <summary>
     /// Interface IBmuFinder

@@ -7,7 +7,7 @@
     <ProjectGuid>{43BC2F0C-1609-4024-B8BC-44D406EB9EA1}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Widemeadows.MachineLearning.Kohonen.Colors</RootNamespace>
+    <RootNamespace>Widemeadows.MachineLearning.Kohonen.Data.Colors</RootNamespace>
     <AssemblyName>Colors</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
