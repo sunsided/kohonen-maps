@@ -1,16 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
-using Widemeadows.MachineLearning.Kohonen.Model;
 using Widemeadows.MachineLearning.Kohonen.Model.Data;
 using Widemeadows.MachineLearning.Kohonen.Model.Random;
 
-namespace Widemeadows.MachineLearning.Kohonen.Tests.RgbMesh
+namespace Widemeadows.MachineLearning.Kohonen.Colors
 {
     /// <summary>
     /// Class DiscreteRandomRgbDataSetProvider.
     /// </summary>
-    class DiscreteRandomRgbDataSetProvider : IDataSetProvider, IRequiresRng
+    public sealed class DiscreteRandomRgbDataSetProvider : IDataSetProvider, IRequiresRng
     {
          /// <summary>
         /// The generator

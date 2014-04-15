@@ -2,9 +2,8 @@
 using System.Drawing;
 using Widemeadows.MachineLearning.Kohonen.Model.Data;
 using Widemeadows.MachineLearning.Kohonen.Model.Neuron;
-using Widemeadows.MachineLearning.Kohonen.Neuron;
 
-namespace Widemeadows.MachineLearning.Kohonen.Tests.RgbMesh
+namespace Widemeadows.MachineLearning.Kohonen.Colors
 {
     /// <summary>
     /// Class ColorDatum. This class cannot be inherited.

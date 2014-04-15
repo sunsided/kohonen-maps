@@ -1,11 +1,9 @@
-﻿using Widemeadows.MachineLearning.Kohonen.Model.Neuron;
-
-namespace Widemeadows.MachineLearning.Kohonen.Neuron
+﻿namespace Widemeadows.MachineLearning.Kohonen.Model.Neuron
 {
     /// <summary>
     /// Class WeightVectorExtensions.
     /// </summary>
-    internal static class WeightVectorExtensions
+    public static class WeightVectorExtensions
     {
         /// <summary>
         /// Implements the +.

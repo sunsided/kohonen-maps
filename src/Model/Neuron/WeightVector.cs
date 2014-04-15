@@ -1,14 +1,13 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using Widemeadows.MachineLearning.Kohonen.Model.Neuron;
 
-namespace Widemeadows.MachineLearning.Kohonen.Neuron
+namespace Widemeadows.MachineLearning.Kohonen.Model.Neuron
 {
     /// <summary>
     /// Class DoubleVector. This class cannot be inherited.
     /// </summary>
-    public class WeightVector : IEnumerable<double>, IWeights
+    public sealed class WeightVector : IEnumerable<double>, IWeights
     {
         /// <summary>
         /// The weights

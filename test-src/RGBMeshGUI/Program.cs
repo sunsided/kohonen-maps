@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using Widemeadows.MachineLearning.Kohonen.Colors;
 using Widemeadows.MachineLearning.Kohonen.Grid;
 using Widemeadows.MachineLearning.Kohonen.Learning;
 using Widemeadows.MachineLearning.Kohonen.Metrics;

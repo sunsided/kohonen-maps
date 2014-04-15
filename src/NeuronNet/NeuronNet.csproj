@@ -50,12 +50,10 @@
     <Compile Include="Random\StandardRng.cs" />
     <Compile Include="Random\XorShiftRng.cs" />
     <Compile Include="Neuron\WeightAdjustment.cs" />
-    <Compile Include="Neuron\WeightVector.cs" />
     <Compile Include="Neuron\Neuron.cs" />
     <Compile Include="Grid\Grid2DFactory.cs" />
     <Compile Include="Grid\NeuronGrid2D.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Neuron\WeightVectorExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Model\Model.csproj">

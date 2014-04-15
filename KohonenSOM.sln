@@ -20,6 +20,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KohonenTestbench", "src\Koh
 		{75C4A7F7-93B2-4474-9049-5B796327DA48} = {75C4A7F7-93B2-4474-9049-5B796327DA48}
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Colors", "src\Colors\Colors.csproj", "{43BC2F0C-1609-4024-B8BC-44D406EB9EA1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -50,6 +52,10 @@ Global
 		{C0430320-36F6-47F7-A88D-E3B73972FB86}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C0430320-36F6-47F7-A88D-E3B73972FB86}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C0430320-36F6-47F7-A88D-E3B73972FB86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43BC2F0C-1609-4024-B8BC-44D406EB9EA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43BC2F0C-1609-4024-B8BC-44D406EB9EA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43BC2F0C-1609-4024-B8BC-44D406EB9EA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43BC2F0C-1609-4024-B8BC-44D406EB9EA1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

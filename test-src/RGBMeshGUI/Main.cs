@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
+using Widemeadows.MachineLearning.Kohonen.Colors;
 using Widemeadows.MachineLearning.Kohonen.Model.Grid;
 
 namespace Widemeadows.MachineLearning.Kohonen.Tests.RgbMesh

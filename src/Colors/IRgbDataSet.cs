@@ -1,7 +1,7 @@
 ﻿using System.Drawing;
 using Widemeadows.MachineLearning.Kohonen.Model.Data;
 
-namespace Widemeadows.MachineLearning.Kohonen.Tests.RgbMesh
+namespace Widemeadows.MachineLearning.Kohonen.Colors
 {
     /// <summary>
     /// Interface IRgbDataSet

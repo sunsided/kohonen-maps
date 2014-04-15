@@ -2,12 +2,12 @@
 using Widemeadows.MachineLearning.Kohonen.Model.Data;
 using Widemeadows.MachineLearning.Kohonen.Model.Random;
 
-namespace Widemeadows.MachineLearning.Kohonen.Tests.RgbMesh
+namespace Widemeadows.MachineLearning.Kohonen.Colors
 {
     /// <summary>
     /// Class RandomRgbDataSetProvider.
     /// </summary>
-    class RandomRgbDataSetProvider : IDataSetProvider, IRequiresRng
+    public sealed class RandomRgbDataSetProvider : IDataSetProvider, IRequiresRng
     {
         /// <summary>
         /// The generator
