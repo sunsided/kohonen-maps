@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.Composition;
 using System.Drawing;
+using Widemeadows.MachineLearning.Kohonen.Model;
 using Widemeadows.MachineLearning.Kohonen.Model.Data;
 using Widemeadows.MachineLearning.Kohonen.Model.Random;
 
@@ -9,6 +11,9 @@ namespace Widemeadows.MachineLearning.Kohonen.Colors
     /// <summary>
     /// Class DiscreteRandomRgbDataSetProvider.
     /// </summary>
+    [Export(typeof(IDataSetProvider))]
+    [PartCreationPolicy(CreationPolicy.Shared)]
+    [IdMetadata("306DFE35-A767-4BCE-BB23-C1C6DA713560", "Discrete Random RGB", "1.0.0.0")]
     public sealed class DiscreteRandomRgbDataSetProvider : IDataSetProvider, IRequiresRng
     {
          /// <summary>

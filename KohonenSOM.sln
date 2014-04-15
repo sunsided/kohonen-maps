@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 12.0.30110.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterfaceScan", "test-src\InterfaceScan\InterfaceScan.csproj", "{B17F6BC6-ECBD-48AA-AA56-6E6D509234EF}"
+	ProjectSection(ProjectDependencies) = postProject
+		{43BC2F0C-1609-4024-B8BC-44D406EB9EA1} = {43BC2F0C-1609-4024-B8BC-44D406EB9EA1}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "src\Model\Model.csproj", "{31069D8C-1779-460E-AA06-5CD126AEDE9F}"
 EndProject

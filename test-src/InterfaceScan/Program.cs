@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.Composition;
 using System.ComponentModel.Composition.Hosting;
 using Widemeadows.MachineLearning.Kohonen.Model;
+using Widemeadows.MachineLearning.Kohonen.Model.Data;
 using Widemeadows.MachineLearning.Kohonen.Model.Learning;
 using Widemeadows.MachineLearning.Kohonen.Model.Metrics;
 using Widemeadows.MachineLearning.Kohonen.Model.Random;
@@ -32,6 +33,9 @@ namespace Widemeadows.MachineLearning.Kohonen.Tests.InterfaceScan
         [ImportMany(typeof(ILearningRate))]
         private IEnumerable<Lazy<ILearningRate, IExtendedMetadata>> _learningRateFunctions = null;
 
+        [ImportMany(typeof(IDataSetProvider))]
+        private IEnumerable<Lazy<IDataSetProvider, IExtendedMetadata>> _dataSetProviders = null;
+
         [Export("TotalIterations")]
         private int _totalIterations = 100;
 
@@ -55,6 +59,7 @@ namespace Widemeadows.MachineLearning.Kohonen.Tests.InterfaceScan
             List("Neighborhood Functions", _neighborhoodFunctions);
             List("Radius Functions", _radiusFunctions);
             List("Learning Rate Functions", _learningRateFunctions);
+            List("Data Set Providers", _dataSetProviders);
 
             Console.WriteLine("Press key to exit.");
             Console.ReadKey(true);
