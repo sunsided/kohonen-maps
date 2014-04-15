@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -41,7 +42,7 @@ namespace Widemeadows.MachineLearning.Kohonen.Tests.RgbMesh
         public IDatum PickRandom(IRandomNumber generator)
         {
             var size = _colors.Length;
-            var index = (int)generator.GetDouble(0, size - 1);
+            var index = (int)Math.Round(generator.GetDouble(0, size - 1));
             var color = _colors[index];
             return new ColorDatum(color);
         }
