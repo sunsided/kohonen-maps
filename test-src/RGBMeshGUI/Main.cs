@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Drawing;
 using System.Drawing.Drawing2D;
+using System.Threading;
 using System.Windows.Forms;
 using Widemeadows.MachineLearning.Kohonen.Data.Colors;
 using Widemeadows.MachineLearning.Kohonen.Grid;
+using Timer = System.Windows.Forms.Timer;
 
 namespace Widemeadows.MachineLearning.Kohonen.Tests.RgbMesh
 {
@@ -19,10 +21,32 @@ namespace Widemeadows.MachineLearning.Kohonen.Tests.RgbMesh
         /// </summary>
         private DataSet _dataSetWindow;
 
+        /// <summary>
+        /// The display mode
+        /// </summary>
+        private int _mode;
+
         public Main()
         {
             InitializeComponent();
             DoubleBuffered = true;
+
+            var timer = new Timer {Interval = 2000};
+            timer.Tick += TimerOnTick;
+            timer.Start();
+        }
+
+        /// <summary>
+        /// Timers the on tick. :)
+        /// </summary>
+        /// <param name="sender">The sender.</param>
+        /// <param name="eventArgs">The <see cref="EventArgs"/> instance containing the event data.</param>
+        /// <exception cref="System.NotImplementedException"></exception>
+        private void TimerOnTick(object sender, EventArgs eventArgs)
+        {
+            Interlocked.Increment(ref _mode);
+            Interlocked.CompareExchange(ref _mode, 0, 4);
+            Invalidate();
         }
 
         /// <summary>
@@ -69,6 +93,20 @@ namespace Widemeadows.MachineLearning.Kohonen.Tests.RgbMesh
                 var g = (int)Clamp(gn.Neuron.Weights[1] * 255.0, 0.0, 255.0);
                 var b = (int)Clamp(gn.Neuron.Weights[2] * 255.0, 0.0, 255.0);
                 var color = Color.FromArgb(r, g, b);
+                switch (_mode)
+                {
+                    default:
+                        break;
+                    case 1:
+                        color = Color.FromArgb(r, r, r);
+                        break;
+                    case 2:
+                        color = Color.FromArgb(g, g, g);
+                        break;
+                    case 3:
+                        color = Color.FromArgb(b, b, b);
+                        break;
+                }
 
                 if (valid)
                 {
