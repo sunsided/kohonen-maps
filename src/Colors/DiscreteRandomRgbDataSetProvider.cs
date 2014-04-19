@@ -62,7 +62,9 @@ namespace Widemeadows.MachineLearning.Kohonen.Data.Colors
                                       Color.DarkBlue,
                                       Color.Black,
                                       Color.Olive,
-                                      Color.Red
+                                      Color.Red,
+                                      Color.Yellow,
+                                      Color.Green
                                   };
             }
         }
