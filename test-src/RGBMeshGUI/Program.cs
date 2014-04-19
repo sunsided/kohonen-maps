@@ -48,6 +48,7 @@ namespace Widemeadows.MachineLearning.Kohonen.Tests.RgbMesh
 
             // prepare the grid
             var grid = gridFactory.CreateGrid(width, height, neuronFactory);
+            grid.IsSpherical = true;
 
             // prepare adjustment functions
             var radiusFunction = new RadiusExponentialShrink()
@@ -74,7 +75,8 @@ namespace Widemeadows.MachineLearning.Kohonen.Tests.RgbMesh
                 var trainingVectorWeights = picked.MapToWeights();
                 foreach (var gridNeuron in grid)
                 {
-                    var distanceToBmu = metric.CalculateDistance(bmu.GridCoordinates, gridNeuron.GridCoordinates);
+                    // calculate the distance on the grid
+                    var distanceToBmu = grid.CalculateDistance(metric, bmu, gridNeuron);
 
                     // calculate the new weights
                     var currentWeights = gridNeuron.Neuron.Weights;

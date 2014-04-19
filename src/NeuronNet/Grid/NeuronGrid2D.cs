@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Widemeadows.MachineLearning.Kohonen.Metrics;
 using Widemeadows.MachineLearning.Kohonen.Neuron;
 
 namespace Widemeadows.MachineLearning.Kohonen.Grid
@@ -47,6 +48,43 @@ namespace Widemeadows.MachineLearning.Kohonen.Grid
         {
             get { return _neurons[x, y]; }
             set { _neurons[x, y] = value; }
+        }
+
+        /// <summary>
+        /// Gets or sets a value indicating whether this instance is spherical.
+        /// </summary>
+        /// <value><c>true</c> if this instance is spherical; otherwise, <c>false</c>.</value>
+        public bool IsSpherical { get; set; }
+
+        /// <summary>
+        /// Calculates the distance.
+        /// </summary>
+        /// <param name="metric">The metric.</param>
+        /// <param name="bmu">The bmu.</param>
+        /// <param name="gridNeuron">The grid neuron.</param>
+        /// <returns>System.Double.</returns>
+        public double CalculateDistance(IMetric metric, IBestMatchingUnit bmu, IGridNeuron gridNeuron)
+        {
+            var distanceToBmu = metric.CalculateDistance(bmu.GridCoordinates, gridNeuron.GridCoordinates);
+            if (!IsSpherical) return distanceToBmu;
+
+            // on spherical grids, check the wrap-around distances
+            //
+            //
+            //   X 1 2 2 1
+            //   1 2 3 3 2
+            //   2 3 4 4 3
+            //   1 2 3 3 2
+
+            var coordinates = gridNeuron.GridCoordinates;
+            var coordinatesX = new[] {Width - coordinates[0], coordinates[1]};
+            var coordinatesY = new[] { coordinates[0], Height - coordinates[1] };
+            var coordinatesXy = new[] { Width - coordinates[0], Height - coordinates[1] };
+
+            distanceToBmu = Math.Min(distanceToBmu, metric.CalculateDistance(bmu.GridCoordinates, coordinatesX));
+            distanceToBmu = Math.Min(distanceToBmu, metric.CalculateDistance(bmu.GridCoordinates, coordinatesY));
+            distanceToBmu = Math.Min(distanceToBmu, metric.CalculateDistance(bmu.GridCoordinates, coordinatesXy));
+            return distanceToBmu;
         }
 
         /// <summary>

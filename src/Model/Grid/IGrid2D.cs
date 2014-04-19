@@ -1,4 +1,5 @@
 using JetBrains.Annotations;
+using Widemeadows.MachineLearning.Kohonen.Metrics;
 using Widemeadows.MachineLearning.Kohonen.Neuron;
 
 namespace Widemeadows.MachineLearning.Kohonen.Grid
@@ -28,5 +29,11 @@ namespace Widemeadows.MachineLearning.Kohonen.Grid
         /// <returns>NeuronNet.INeuron.</returns>
         [NotNull]
         INeuron this[int x, int y] { get; }
+
+        /// <summary>
+        /// Gets or sets a value indicating whether this instance is spherical.
+        /// </summary>
+        /// <value><c>true</c> if this instance is spherical; otherwise, <c>false</c>.</value>
+        bool IsSpherical { get; set; }
     }
 }
