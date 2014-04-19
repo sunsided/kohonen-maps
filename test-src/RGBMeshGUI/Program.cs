@@ -30,8 +30,8 @@ namespace Widemeadows.MachineLearning.Kohonen.Tests.RgbMesh
             const int height = 32;
             const int count = width * height;
 
-            const int totalIterations = 300;
-            double baseRadius = Math.Sqrt(count)*0.4;
+            const int totalIterations = 500;
+            double baseRadius = Math.Sqrt(count)*0.2;
 
             // prepare generator and randomized data set
             var generator = new StandardRng();

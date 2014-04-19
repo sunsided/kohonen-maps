@@ -77,9 +77,9 @@ namespace Widemeadows.MachineLearning.Kohonen.Grid
             //   1 2 3 3 2
 
             var coordinates = gridNeuron.GridCoordinates;
-            var coordinatesX = new[] {Width - coordinates[0], coordinates[1]};
-            var coordinatesY = new[] { coordinates[0], Height - coordinates[1] };
-            var coordinatesXy = new[] { Width - coordinates[0], Height - coordinates[1] };
+            var coordinatesX = new[] { coordinates[0] - Width + 2, coordinates[1] };
+            var coordinatesY = new[] { coordinates[0], coordinates[1] - Height + 2 };
+            var coordinatesXy = new[] { coordinatesX[0], coordinatesY[1] };
 
             distanceToBmu = Math.Min(distanceToBmu, metric.CalculateDistance(bmu.GridCoordinates, coordinatesX));
             distanceToBmu = Math.Min(distanceToBmu, metric.CalculateDistance(bmu.GridCoordinates, coordinatesY));
