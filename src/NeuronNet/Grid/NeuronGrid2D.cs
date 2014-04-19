@@ -54,7 +54,7 @@ namespace Widemeadows.MachineLearning.Kohonen.Grid
         /// Gets or sets a value indicating whether this instance is spherical.
         /// </summary>
         /// <value><c>true</c> if this instance is spherical; otherwise, <c>false</c>.</value>
-        public bool IsSpherical { get; set; }
+        public bool IsToroidal { get; set; }
 
         /// <summary>
         /// Calculates the distance.
@@ -66,7 +66,7 @@ namespace Widemeadows.MachineLearning.Kohonen.Grid
         public double CalculateDistance(IMetric metric, IBestMatchingUnit bmu, IGridNeuron gridNeuron)
         {
             var distanceToBmu = metric.CalculateDistance(bmu.GridCoordinates, gridNeuron.GridCoordinates);
-            if (!IsSpherical) return distanceToBmu;
+            if (!IsToroidal) return distanceToBmu;
 
             // on spherical grids, check the wrap-around distances
             //

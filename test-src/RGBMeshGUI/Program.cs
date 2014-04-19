@@ -48,7 +48,7 @@ namespace Widemeadows.MachineLearning.Kohonen.Tests.RgbMesh
 
             // prepare the grid
             var grid = gridFactory.CreateGrid(width, height, neuronFactory);
-            grid.IsSpherical = false;
+            grid.IsToroidal = false;
 
             // prepare adjustment functions
             var radiusFunction = new RadiusExponentialShrink()

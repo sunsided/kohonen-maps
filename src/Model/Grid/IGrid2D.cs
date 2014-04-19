@@ -34,6 +34,6 @@ namespace Widemeadows.MachineLearning.Kohonen.Grid
         /// Gets or sets a value indicating whether this instance is spherical.
         /// </summary>
         /// <value><c>true</c> if this instance is spherical; otherwise, <c>false</c>.</value>
-        bool IsSpherical { get; set; }
+        bool IsToroidal { get; set; }
     }
 }
