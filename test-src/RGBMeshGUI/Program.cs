@@ -26,12 +26,12 @@ namespace Widemeadows.MachineLearning.Kohonen.Tests.RgbMesh
         /// </summary>
         private void Run()
         {
-            const int width = 32;
-            const int height = 32;
+            const int width = 64;
+            const int height = 64;
             const int count = width * height;
 
             const int totalIterations = 500;
-            double baseRadius = Math.Sqrt(count)*0.2;
+            double baseRadius = Math.Sqrt(count)*0.6;
 
             // prepare generator and randomized data set
             var generator = new StandardRng();
@@ -54,13 +54,15 @@ namespace Widemeadows.MachineLearning.Kohonen.Tests.RgbMesh
             var radiusFunction = new RadiusExponentialShrink()
                                  {
                                      TotalIterations = totalIterations,
-                                     StartRadius = baseRadius
+                                     StartRadius = baseRadius,
+                                     EndRadius = 1
                                  };
             var neighborhoodFunction = new GaussianNeighborhood();
             var learningRateFunction = new LearningRateExponentialShrink()
                                        {
                                            TotalIterations = totalIterations,
-                                           StartRate = 2
+                                           StartRate = 1,
+                                           EndRate =  0.001,
                                        };
             var weightAdjustment = new WeightAdjustment(radiusFunction, neighborhoodFunction, learningRateFunction);
 

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 using System.ComponentModel.Composition;
 using Widemeadows.MachineLearning.Kohonen.Model;
 
@@ -15,14 +16,17 @@ namespace Widemeadows.MachineLearning.Kohonen.Learning
         /// <summary>
         /// The number of total iterations
         /// </summary>
-        [Import("TotalIterations", AllowDefault = true)]
         public int TotalIterations { get; set; }
 
         /// <summary>
         /// The starting learning rate
         /// </summary>
-        [Import("StartRadius", AllowDefault = true)]
         public double StartRadius { get; set; }
+
+        /// <summary>
+        /// The starting learning rate
+        /// </summary>
+        public double EndRadius { get; set; }
 
         /// <summary>
         /// Calculates the radius.
@@ -32,9 +36,9 @@ namespace Widemeadows.MachineLearning.Kohonen.Learning
         public double CalculateRadius(int iteration)
         {
             var totalIterations = (double)TotalIterations;
-            var radius = StartRadius;
-
-            return radius * Math.Exp(-(double)iteration / totalIterations / Math.Log(radius));
+            var startRate = StartRadius;
+            var endAmount = EndRadius;
+            return startRate * Math.Pow(endAmount / startRate, iteration / totalIterations);
         }
     }
 }

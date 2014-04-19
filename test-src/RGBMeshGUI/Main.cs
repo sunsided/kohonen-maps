@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Windows.Forms;
 using Widemeadows.MachineLearning.Kohonen.Data.Colors;
 using Widemeadows.MachineLearning.Kohonen.Grid;
@@ -49,6 +50,10 @@ namespace Widemeadows.MachineLearning.Kohonen.Tests.RgbMesh
             var ystep = ClientRectangle.Height / ((float)width + 1);
 
             var gr = e.Graphics;
+            gr.SmoothingMode = SmoothingMode.HighQuality;
+            gr.InterpolationMode = InterpolationMode.HighQualityBicubic;
+            gr.PixelOffsetMode = PixelOffsetMode.HighQuality;
+
             float w = Math.Min(xstep, ystep) * 0.85F;
 
             foreach (var gn in grid)
