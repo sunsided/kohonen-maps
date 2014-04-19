@@ -1,4 +1,6 @@
-﻿namespace Widemeadows.MachineLearning.Kohonen.Neuron
+﻿using JetBrains.Annotations;
+
+namespace Widemeadows.MachineLearning.Kohonen.Neuron
 {
     /// <summary>
     /// Interface INeuron
@@ -9,6 +11,7 @@
         /// Gets the weights.
         /// </summary>
         /// <value>The weights.</value>
+        [NotNull]
         IWeights Weights { get; }
 
         /// <summary>
@@ -16,6 +19,6 @@
         /// </summary>
         /// <param name="newWeights">The new weights.</param>
         /// <exception cref="System.ArgumentException">Lengths of weight vectors differ.</exception>
-        void UpdateWeights(IWeights newWeights);
+        void UpdateWeights([NotNull] IWeights newWeights);
     }
 }

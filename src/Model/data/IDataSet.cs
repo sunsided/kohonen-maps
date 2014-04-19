@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using JetBrains.Annotations;
 using Widemeadows.MachineLearning.Kohonen.Random;
 
 namespace Widemeadows.MachineLearning.Kohonen.Data
@@ -13,7 +14,8 @@ namespace Widemeadows.MachineLearning.Kohonen.Data
         /// </summary>
         /// <param name="generator">The generator.</param>
         /// <returns>IDatum.</returns>
-        IDatum PickRandom(IRandomNumber generator);
+        [NotNull]
+        IDatum PickRandom([NotNull] IRandomNumber generator);
 
         /// <summary>
         /// Gets a value indicating whether this data set supports editing.
@@ -38,14 +40,14 @@ namespace Widemeadows.MachineLearning.Kohonen.Data
         /// </summary>
         /// <param name="datum">The datum.</param>
         /// <returns><c>true</c> if the instance was edited successfully, <c>false</c> otherwise.</returns>
-        bool EditDatum(IDatum datum);
+        bool EditDatum([NotNull] IDatum datum);
 
         /// <summary>
         /// Removes the specified datum.
         /// </summary>
         /// <param name="datum">The datum.</param>
         /// <returns><c>true</c> if the instance was removed successfully, <c>false</c> otherwise.</returns>
-        bool RemoveDatum(IDatum datum);
+        bool RemoveDatum([NotNull] IDatum datum);
 
         /// <summary>
         /// Creates a new datum.

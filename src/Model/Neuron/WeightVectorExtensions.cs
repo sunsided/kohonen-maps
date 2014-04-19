@@ -1,4 +1,5 @@
 ﻿using System;
+using JetBrains.Annotations;
 
 namespace Widemeadows.MachineLearning.Kohonen.Neuron
 {
@@ -13,7 +14,8 @@ namespace Widemeadows.MachineLearning.Kohonen.Neuron
         /// <param name="a">A.</param>
         /// <param name="b">The b.</param>
         /// <returns>The result of the operator.</returns>
-        public static IWeights AddInPlace(this IWeights a, IWeights b)
+        [NotNull]
+        public static IWeights AddInPlace([NotNull] this IWeights a, [NotNull] IWeights b)
         {
             for (var i = 0; i < a.Length; ++i)
             {
@@ -21,14 +23,15 @@ namespace Widemeadows.MachineLearning.Kohonen.Neuron
             }
             return a;
         }
-        
+
         /// <summary>
         /// Implements the +.
         /// </summary>
         /// <param name="a">A.</param>
         /// <param name="b">The b.</param>
         /// <returns>The result of the operator.</returns>
-        public static IWeights Add(this IWeights a, IWeights b)
+        [NotNull]
+        public static IWeights Add([NotNull] this IWeights a, [NotNull] IWeights b)
         {
             var weights = new WeightVector(a);
             return AddInPlace(weights, b);

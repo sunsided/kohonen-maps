@@ -1,4 +1,5 @@
-﻿using Widemeadows.MachineLearning.Kohonen.Data;
+﻿using JetBrains.Annotations;
+using Widemeadows.MachineLearning.Kohonen.Data;
 
 namespace Widemeadows.MachineLearning.Kohonen.Grid
 {
@@ -13,6 +14,7 @@ namespace Widemeadows.MachineLearning.Kohonen.Grid
         /// <param name="grid">The grid.</param>
         /// <param name="datum">The datum.</param>
         /// <returns>INeuron.</returns>
-        IBestMatchingUnit FindBestMatchingUnit(IGrid2D grid, IDatum datum);
+        [NotNull]
+        IBestMatchingUnit FindBestMatchingUnit([NotNull] IGrid2D grid, [NotNull] IDatum datum);
     }
 }

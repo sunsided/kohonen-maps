@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using Widemeadows.MachineLearning.Kohonen.Neuron;
 
 namespace Widemeadows.MachineLearning.Kohonen.Grid
@@ -25,6 +26,7 @@ namespace Widemeadows.MachineLearning.Kohonen.Grid
         /// <param name="x">The x.</param>
         /// <param name="y">The y.</param>
         /// <returns>NeuronNet.INeuron.</returns>
+        [NotNull]
         INeuron this[int x, int y] { get; }
     }
 }

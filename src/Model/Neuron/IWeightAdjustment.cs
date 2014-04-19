@@ -1,4 +1,6 @@
-﻿namespace Widemeadows.MachineLearning.Kohonen.Neuron
+﻿using JetBrains.Annotations;
+
+namespace Widemeadows.MachineLearning.Kohonen.Neuron
 {
     /// <summary>
     /// Interface IWeightAdjustment
@@ -13,6 +15,7 @@
         /// <param name="currentWeights">The current weights.</param>
         /// <param name="distance">The distance.</param>
         /// <returns>IWeights.</returns>
-        IWeights CalculateNewWeights(int iteration, IWeights trainingVector, IWeights currentWeights, double distance);
+        [NotNull]
+        IWeights CalculateNewWeights(int iteration, [NotNull] IWeights trainingVector, [NotNull] IWeights currentWeights, double distance);
     }
 }

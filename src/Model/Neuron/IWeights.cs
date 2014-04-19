@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using JetBrains.Annotations;
 
 namespace Widemeadows.MachineLearning.Kohonen.Neuron
 {
@@ -28,12 +29,13 @@ namespace Widemeadows.MachineLearning.Kohonen.Neuron
         /// </summary>
         /// <param name="newWeights">The new weights.</param>
         /// <exception cref="System.ArgumentException">Lengths of weight vectors differ.</exception>
-        void Update(IWeights newWeights);
+        void Update([NotNull] IWeights newWeights);
 
         /// <summary>
         /// Gets as list.
         /// </summary>
         /// <value>As list.</value>
+        [NotNull]
         IReadOnlyList<double> AsReadOnlyList { get; }
     }
 }

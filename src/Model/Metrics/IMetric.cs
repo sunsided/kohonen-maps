@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using JetBrains.Annotations;
 using Widemeadows.MachineLearning.Kohonen.Neuron;
 
 namespace Widemeadows.MachineLearning.Kohonen.Metrics
@@ -15,7 +16,7 @@ namespace Widemeadows.MachineLearning.Kohonen.Metrics
         /// <param name="b">The b.</param>
         /// <returns>System.Double.</returns>
         /// <exception cref="System.ArgumentException">Lengths of weight vectors differ.</exception>
-        double CalculateDistance(IWeights a, IWeights b);
+        double CalculateDistance([NotNull] IWeights a, [NotNull] IWeights b);
 
         /// <summary>
         /// Calculates the distance between two value vectors.
@@ -24,6 +25,6 @@ namespace Widemeadows.MachineLearning.Kohonen.Metrics
         /// <param name="b">The b.</param>
         /// <returns>System.Double.</returns>
         /// <exception cref="System.ArgumentException">Lengths of input vectors differ.</exception>
-        double CalculateDistance(IReadOnlyList<double> a, IReadOnlyList<double> b);
+        double CalculateDistance([NotNull] IReadOnlyList<double> a, [NotNull] IReadOnlyList<double> b);
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using JetBrains.Annotations;
 
 namespace Widemeadows.MachineLearning.Kohonen.Neuron
 {
@@ -17,6 +18,7 @@ namespace Widemeadows.MachineLearning.Kohonen.Neuron
         /// Gets the grid coordinates.
         /// </summary>
         /// <value>The grid coordinates.</value>
+        [NotNull]
         IReadOnlyList<double> GridCoordinates { get; }
     }
 }

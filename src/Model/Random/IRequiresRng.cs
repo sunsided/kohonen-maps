@@ -1,4 +1,6 @@
-﻿namespace Widemeadows.MachineLearning.Kohonen.Random
+﻿using JetBrains.Annotations;
+
+namespace Widemeadows.MachineLearning.Kohonen.Random
 {
     /// <summary>
     /// Interface IRandomNumber
@@ -9,6 +11,6 @@
         /// Sets the random number generator.
         /// </summary>
         /// <param name="generator">The generator.</param>
-        void SetRandomNumberGenerator(IRandomNumber generator);
+        void SetRandomNumberGenerator([NotNull] IRandomNumber generator);
     }
 }

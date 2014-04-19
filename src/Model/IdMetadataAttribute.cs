@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel.Composition;
+using JetBrains.Annotations;
 
 namespace Widemeadows.MachineLearning.Kohonen
 {
@@ -13,18 +14,21 @@ namespace Widemeadows.MachineLearning.Kohonen
         /// Gets the name.
         /// </summary>
         /// <value>The name.</value>
+        [NotNull]
         public string Name { get; private set; }
 
         /// <summary>
         /// Gets the version.
         /// </summary>
         /// <value>The version.</value>
+        [NotNull]
         public string Version { get; private set; }
 
         /// <summary>
         /// Gets the identifier.
         /// </summary>
         /// <value>The identifier.</value>
+        [NotNull]
         public string Id { get; private set; }
 
         /// <summary>
@@ -35,7 +39,7 @@ namespace Widemeadows.MachineLearning.Kohonen
         /// <param name="version">The version.</param>
         /// <exception cref="System.ArgumentException">The given ID string was not a valid GUID format.;id</exception>
         /// <exception cref="System.ArgumentException">The given version string was not a valid Version format.;version</exception>
-        public IdMetadataAttribute(string id, string name, string version)
+        public IdMetadataAttribute([NotNull] string id, [NotNull] string name, [NotNull] string version)
         {
             ValidateGuid(id);
             ValidateVersion(version);
@@ -50,10 +54,11 @@ namespace Widemeadows.MachineLearning.Kohonen
         /// </summary>
         /// <param name="version">The version.</param>
         /// <exception cref="System.ArgumentException">The given version string was not a valid Version format.;version</exception>
-        private static void ValidateVersion(string version)
+        private static void ValidateVersion([NotNull] string version)
         {
             Version ignored;
-            if (!System.Version.TryParse(version, out ignored)) throw new ArgumentException("The given version string was not a valid Version format.", "version");
+            if (!System.Version.TryParse(version, out ignored))
+                throw new ArgumentException("The given version string was not a valid Version format.", "version");
         }
 
         /// <summary>
@@ -61,10 +66,11 @@ namespace Widemeadows.MachineLearning.Kohonen
         /// </summary>
         /// <param name="id">The identifier.</param>
         /// <exception cref="System.ArgumentException">The given ID string was not a valid GUID format.;id</exception>
-        private static void ValidateGuid(string id)
+        private static void ValidateGuid([NotNull] string id)
         {
             Guid ignored;
-            if (!Guid.TryParse(id, out ignored)) throw new ArgumentException("The given ID string was not a valid GUID format.", "id");
+            if (!Guid.TryParse(id, out ignored))
+                throw new ArgumentException("The given ID string was not a valid GUID format.", "id");
         }
     }
 }

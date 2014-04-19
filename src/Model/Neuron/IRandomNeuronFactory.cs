@@ -1,4 +1,5 @@
-﻿using Widemeadows.MachineLearning.Kohonen.Random;
+﻿using JetBrains.Annotations;
+using Widemeadows.MachineLearning.Kohonen.Random;
 
 namespace Widemeadows.MachineLearning.Kohonen.Neuron
 {
@@ -12,6 +13,7 @@ namespace Widemeadows.MachineLearning.Kohonen.Neuron
         /// </summary>
         /// <param name="generator">The generator.</param>
         /// <returns>INeuron.</returns>
-        INeuron CreateRandom(IRandomNumber generator);
+        [NotNull]
+        INeuron CreateRandom([NotNull] IRandomNumber generator);
     }
 }

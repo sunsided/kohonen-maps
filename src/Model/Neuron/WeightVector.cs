@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using JetBrains.Annotations;
 
 namespace Widemeadows.MachineLearning.Kohonen.Neuron
 {
@@ -68,10 +69,10 @@ namespace Widemeadows.MachineLearning.Kohonen.Neuron
         /// Initializes a new instance of the <see cref="WeightVector"/> class.
         /// </summary>
         /// <param name="weights">The weights.</param>
-        public WeightVector(double[] weights)
-            : this(weights.Length)
+        public WeightVector([NotNull] IReadOnlyList<double> weights)
+            : this(weights.Count)
         {
-            for (var i = 0; i < weights.Length; ++i)
+            for (var i = 0; i < weights.Count; ++i)
             {
                 this[i] = weights[i];
             }
@@ -81,7 +82,7 @@ namespace Widemeadows.MachineLearning.Kohonen.Neuron
         /// Initializes a new instance of the <see cref="WeightVector"/> class.
         /// </summary>
         /// <param name="weights">The weights.</param>
-        public WeightVector(IWeights weights)
+        public WeightVector([NotNull] IWeights weights)
             : this(weights.Length)
         {
             for (var i = 0; i < weights.Length; ++i)
