@@ -49,7 +49,7 @@ namespace Widemeadows.MachineLearning.Kohonen.Tests.RgbMesh
             var ystep = ClientRectangle.Height / ((float)width + 1);
 
             var gr = e.Graphics;
-            float w = Math.Min(xstep, ystep) * 0.75F;
+            float w = Math.Min(xstep, ystep) * 0.85F;
 
             foreach (var gn in grid)
             {
