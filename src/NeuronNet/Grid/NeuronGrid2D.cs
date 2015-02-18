@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.Immutable;
 using Widemeadows.MachineLearning.Kohonen.Metrics;
 using Widemeadows.MachineLearning.Kohonen.Neuron;
 
@@ -81,9 +82,9 @@ namespace Widemeadows.MachineLearning.Kohonen.Grid
             var coordinatesY = new[] { coordinates[0], coordinates[1] - Height + 2 };
             var coordinatesXy = new[] { coordinatesX[0], coordinatesY[1] };
 
-            distanceToBmu = Math.Min(distanceToBmu, metric.CalculateDistance(bmu.GridCoordinates, coordinatesX));
-            distanceToBmu = Math.Min(distanceToBmu, metric.CalculateDistance(bmu.GridCoordinates, coordinatesY));
-            distanceToBmu = Math.Min(distanceToBmu, metric.CalculateDistance(bmu.GridCoordinates, coordinatesXy));
+            distanceToBmu = Math.Min(distanceToBmu, metric.CalculateDistance(bmu.GridCoordinates, coordinatesX.ToImmutableList()));
+            distanceToBmu = Math.Min(distanceToBmu, metric.CalculateDistance(bmu.GridCoordinates, coordinatesY.ToImmutableList()));
+            distanceToBmu = Math.Min(distanceToBmu, metric.CalculateDistance(bmu.GridCoordinates, coordinatesXy.ToImmutableList()));
             return distanceToBmu;
         }
 
@@ -127,7 +128,7 @@ namespace Widemeadows.MachineLearning.Kohonen.Grid
                     var coordinates = new double[] { w, h };
                     var neuron = neurons[w, h];
 
-                    yield return new GridNeuron(neuron, coordinates);
+                    yield return new GridNeuron(neuron, coordinates.ToImmutableList());
                 }
             }
         }

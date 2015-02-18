@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.Immutable;
 using JetBrains.Annotations;
 
 namespace Widemeadows.MachineLearning.Kohonen.Neuron
@@ -50,7 +51,7 @@ namespace Widemeadows.MachineLearning.Kohonen.Neuron
         /// Gets as list.
         /// </summary>
         /// <value>As list.</value>
-        public IReadOnlyList<double> AsReadOnlyList { get { return _weights; } }
+        public IReadOnlyList<double> AsReadOnlyList { get { return _weights.ToImmutableList(); } }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="WeightVector"/> class.

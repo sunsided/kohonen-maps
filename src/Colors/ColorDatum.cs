@@ -1,4 +1,5 @@
-﻿using System.Diagnostics;
+﻿using System.Collections.Immutable;
+using System.Diagnostics;
 using System.Drawing;
 using Widemeadows.MachineLearning.Kohonen.Neuron;
 
@@ -36,7 +37,7 @@ namespace Widemeadows.MachineLearning.Kohonen.Data.Colors
                               _color.G/255.0,
                               _color.B/255.0
                           };
-            var vector = new WeightVector(weights);
+            var vector = new WeightVector(weights.ToImmutableList());
             return vector;
         }
     }
